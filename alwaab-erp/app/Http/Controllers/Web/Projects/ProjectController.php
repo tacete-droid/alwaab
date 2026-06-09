@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Projects;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Domain\Projects\Models\Project;
 use App\Enums\ProjectStatus;
@@ -26,9 +28,9 @@ class ProjectController extends Controller
         )
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%")
-                    ->orWhere('location', 'ilike', "%{$search}%");
+                $query->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('location', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->latest()
             ->paginate(12)

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api\V1\Inventory;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\Inventory\Models\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ProductResource;
@@ -19,9 +21,9 @@ class ProductController extends Controller
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
             ->when($request->category_id, fn ($q, $id) => $q->where('category_id', $id))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('sku', 'ilike', "%{$search}%")
-                    ->orWhere('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%");
+                $query->where('sku', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->paginate($request->integer('per_page', 25));
 

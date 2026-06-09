@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Audit;
 
+use App\Support\DatabaseHelper;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -14,7 +16,7 @@ class AuditLogController extends Controller
     {
         $logs = Activity::query()
             ->with('causer:id,name_ar,name_en,email')
-            ->when($request->search, fn ($q, $search) => $q->where('description', 'ilike', "%{$search}%"))
+            ->when($request->search, fn ($q, $search) => $q->where('description', DatabaseHelper::likeOperator(), "%{$search}%"))
             ->when($request->log_name, fn ($q, $name) => $q->where('log_name', $name))
             ->latest()
             ->paginate(30)

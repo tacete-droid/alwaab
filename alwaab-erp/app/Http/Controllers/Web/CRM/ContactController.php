@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\CRM;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Enums\ContactStatus;
 use App\Enums\ContactType;
@@ -28,10 +30,10 @@ class ContactController extends Controller
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%")
-                    ->orWhere('company', 'ilike', "%{$search}%")
-                    ->orWhere('email', 'ilike', "%{$search}%");
+                $query->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('company', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('email', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->latest()
             ->paginate(15)

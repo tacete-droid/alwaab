@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Access;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\HR\Models\EmployeeProfile;
 use App\Enums\Locale;
 use App\Http\Controllers\Controller;
@@ -29,9 +31,9 @@ class AccessController extends Controller
         $users = User::query()
             ->with(['roles', 'permissions', 'employeeProfile'])
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%")
-                    ->orWhere('email', 'ilike', "%{$search}%");
+                $query->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('email', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->orderBy('name_ar')
             ->paginate(15)

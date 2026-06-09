@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Invoices;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Domain\Inventory\Models\Product;
 use App\Domain\Invoices\Models\Invoice;
@@ -41,10 +43,10 @@ class InvoiceController extends Controller
         )
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('number', 'ilike', "%{$search}%")
-                    ->orWhere('client_name', 'ilike', "%{$search}%")
-                    ->orWhereHas('contact', fn ($c) => $c->where('name_ar', 'ilike', "%{$search}%")
-                        ->orWhere('name_en', 'ilike', "%{$search}%"));
+                $query->where('number', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('client_name', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhereHas('contact', fn ($c) => $c->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                        ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%"));
             }))
             ->whereIn('status', [InvoiceStatus::Saved, InvoiceStatus::Issued, InvoiceStatus::Paid])
             ->latest('document_date')

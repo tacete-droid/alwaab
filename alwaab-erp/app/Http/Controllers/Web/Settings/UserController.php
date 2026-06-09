@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Settings;
 
+use App\Support\DatabaseHelper;
+
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
@@ -17,9 +19,9 @@ class UserController extends Controller
         $users = User::query()
             ->with('roles')
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%")
-                    ->orWhere('email', 'ilike', "%{$search}%");
+                $query->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('email', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->orderBy('name_ar')
             ->paginate(20)

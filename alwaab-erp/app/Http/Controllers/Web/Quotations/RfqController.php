@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\Quotations;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Domain\Projects\Models\Project;
 use App\Domain\Quotations\Models\Rfq;
@@ -38,9 +40,9 @@ class RfqController extends Controller
         )
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('number', 'ilike', "%{$search}%")
-                    ->orWhereHas('contact', fn ($c) => $c->where('name_ar', 'ilike', "%{$search}%")
-                        ->orWhere('name_en', 'ilike', "%{$search}%"));
+                $query->where('number', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhereHas('contact', fn ($c) => $c->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                        ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%"));
             }))
             ->latest()
             ->paginate(15)

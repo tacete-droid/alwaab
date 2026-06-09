@@ -5,7 +5,7 @@
     "keywords": ["laravel", "erp", "crm", "alwaab"],
     "license": "proprietary",
     "require": {
-        "php": "^8.4",
+        "php": "^8.2",
         "barryvdh/laravel-dompdf": "^3.1",
         "inertiajs/inertia-laravel": "^2.0",
         "intervention/image-laravel": "^1.0",

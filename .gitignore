@@ -39,3 +39,4 @@ Desktop.ini
 
 # Generated at deploy
 docker/nginx/production.conf
+dist/

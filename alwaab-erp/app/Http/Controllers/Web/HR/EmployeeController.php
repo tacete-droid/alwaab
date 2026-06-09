@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Web\HR;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\HR\Models\EmployeeProfile;
 use App\Enums\HrDocumentType;
 use App\Http\Controllers\Controller;
@@ -28,10 +30,10 @@ class EmployeeController extends Controller
             ->when(true, fn ($q) => $this->scope->scopeEmployees($q, $request->user()))
             ->when($request->department, fn ($q, $dept) => $q->where('department', $dept))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('employee_code', 'ilike', "%{$search}%")
-                    ->orWhere('emirates_id', 'ilike', "%{$search}%")
-                    ->orWhereHas('user', fn ($u) => $u->where('name_ar', 'ilike', "%{$search}%")
-                        ->orWhere('name_en', 'ilike', "%{$search}%"));
+                $query->where('employee_code', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('emirates_id', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhereHas('user', fn ($u) => $u->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                        ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%"));
             }))
             ->orderBy('employee_code')
             ->paginate(20)

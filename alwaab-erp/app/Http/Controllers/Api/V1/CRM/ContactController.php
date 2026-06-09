@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api\V1\CRM;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CRM\StoreContactRequest;
@@ -20,9 +22,9 @@ class ContactController extends Controller
             ->when($request->type, fn ($q, $type) => $q->where('type', $type))
             ->when($request->status, fn ($q, $status) => $q->where('status', $status))
             ->when($request->search, fn ($q, $search) => $q->where(function ($query) use ($search) {
-                $query->where('name_ar', 'ilike', "%{$search}%")
-                    ->orWhere('name_en', 'ilike', "%{$search}%")
-                    ->orWhere('company', 'ilike', "%{$search}%");
+                $query->where('name_ar', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('name_en', DatabaseHelper::likeOperator(), "%{$search}%")
+                    ->orWhere('company', DatabaseHelper::likeOperator(), "%{$search}%");
             }))
             ->latest()
             ->paginate($request->integer('per_page', 25));

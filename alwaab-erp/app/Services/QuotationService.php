@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\Inventory\Models\Product;
 use App\Domain\Quotations\Models\Quotation;
 use App\Domain\Quotations\Models\QuotationItem;
@@ -22,8 +24,8 @@ class QuotationService
         $pattern = "{$prefix}-{$year}-%";
 
         $latest = match ($prefix) {
-            'RFQ' => Rfq::where('number', 'ilike', $pattern)->orderByDesc('number')->value('number'),
-            'QUO' => Quotation::where('number', 'ilike', $pattern)->orderByDesc('number')->value('number'),
+            'RFQ' => Rfq::where('number', DatabaseHelper::likeOperator(), $pattern)->orderByDesc('number')->value('number'),
+            'QUO' => Quotation::where('number', DatabaseHelper::likeOperator(), $pattern)->orderByDesc('number')->value('number'),
             default => null,
         };
 

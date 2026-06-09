@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Support\DatabaseHelper;
+
 use App\Domain\CRM\Models\Contact;
 use App\Domain\Inventory\Models\Product;
 use App\Domain\Invoices\Models\Invoice;
@@ -21,7 +23,7 @@ class InvoiceService
         $period = now()->format('mY');
         $pattern = "{$prefix}/{$period}/%";
 
-        $latest = Invoice::where('number', 'ilike', $pattern)
+        $latest = Invoice::where('number', DatabaseHelper::likeOperator(), $pattern)
             ->orderByDesc('number')
             ->value('number');
 
@@ -262,8 +264,8 @@ class InvoiceService
                     ->where('is_active', true)
                     ->where(function ($query) use ($item) {
                         $query->where('sku', $item['sku'])
-                            ->orWhere('sku', 'ilike', '%'.$item['sku'].'%')
-                            ->orWhere('name_en', 'ilike', '%'.$item['name'].'%');
+                            ->orWhere('sku', DatabaseHelper::likeOperator(), '%'.$item['sku'].'%')
+                            ->orWhere('name_en', DatabaseHelper::likeOperator(), '%'.$item['name'].'%');
                     })
                     ->first();
 

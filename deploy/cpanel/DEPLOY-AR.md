@@ -4,8 +4,8 @@
 
 | المتطلب | الحالة |
 |---------|--------|
-| PHP **8.4** | إلزامي — cPanel → MultiPHP Manager |
-| PostgreSQL | إلزامي — cPanel → PostgreSQL Databases |
+| PHP **8.2+** (8.4 موصى به) | cPanel → MultiPHP Manager |
+| PostgreSQL **أو** MySQL | PostgreSQL موصى به — أو MySQL من cPanel → MySQL Databases |
 | SSH / Terminal | موصى به بشدة |
 | SSL | cPanel → SSL/TLS → Let's Encrypt |
 | Composer | عبر SSH: `curl -sS https://getcomposer.org/installer \| php` |
@@ -37,14 +37,26 @@
 
 ---
 
-## الخطوة 2 — PHP 8.4
+## الخطوة 2 — PHP 8.2+
 
 1. cPanel → **MultiPHP Manager**
-2. اختر PHP **8.4** للدومين الرئيسي و subdomain الـ ERP
+2. اختر PHP **8.2** أو أحدث للدومين الرئيسي و subdomain الـ ERP
 3. cPanel → **Select PHP Version** → Extensions:
    - `pdo_pgsql`, `pgsql`, `mbstring`, `xml`, `curl`, `zip`, `gd`, `exif`, `bcmath`, `fileinfo`, `intl`
 
 ---
+
+## الإعداد السريع (أول مرة)
+
+```bash
+cd ~
+git clone https://github.com/tacete-droid/alwaab.git alwaab
+cd alwaab
+bash deploy/cpanel/preflight.sh          # فحص السيرفر
+bash deploy/cpanel/setup-first-time.sh   # إعداد تلقائي
+```
+
+> راجع أيضاً: `deploy/cpanel/CHECKLIST-AR.md`
 
 ## الخطوة 3 — استنساخ المشروع
 

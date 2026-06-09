@@ -48,11 +48,16 @@ bash "${ROOT}/deploy/generate-website-config.sh"
 # نشر ملفات الموقع إلى public_html
 if [[ -d "$WEB_DST" ]]; then
   echo "==> نشر الموقع إلى ${WEB_DST}"
-  rsync -a --delete \
-    --exclude 'js/erp-config.example.js' \
-    --exclude '.gitignore' \
-    "${WEB_SRC}/" "${WEB_DST}/"
-  # erp-config.js يُولَّد في WEB_SRC/js/ ثم يُنسخ
+  if command -v rsync &>/dev/null; then
+    rsync -a --delete \
+      --exclude 'js/erp-config.example.js' \
+      --exclude '.gitignore' \
+      "${WEB_SRC}/" "${WEB_DST}/"
+  else
+    find "${WEB_SRC}" -mindepth 1 -maxdepth 1 ! -name '.gitignore' \
+      -exec cp -R {} "${WEB_DST}/" \;
+  fi
+  mkdir -p "${WEB_DST}/js"
   cp "${WEB_SRC}/js/erp-config.js" "${WEB_DST}/js/erp-config.js"
 fi
 
