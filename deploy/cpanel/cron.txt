@@ -1,0 +1,8 @@
+# cPanel → Cron Jobs → أضف هذه المهام
+# استبدل USERNAME و المسار حسب حسابك
+
+# Laravel Scheduler — كل دقيقة
+* * * * * /usr/local/bin/php /home/USERNAME/alwaab/alwaab-erp/artisan schedule:run >> /dev/null 2>&1
+
+# Queue Worker — كل دقيقة (AI Studio + الإيميلات)
+* * * * * /usr/local/bin/php /home/USERNAME/alwaab/alwaab-erp/artisan queue:work database --stop-when-empty --max-time=55 >> /dev/null 2>&1
