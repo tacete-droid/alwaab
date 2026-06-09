@@ -1,0 +1,182 @@
+/* ALWAAB ERP — Light / Dark theme tokens */
+:root,
+[data-theme="dark"] {
+    --app-bg: #0a0f1e;
+    --app-surface: #0f172a;
+    --app-card: #1a2540;
+    --app-input: #0f172a;
+    --app-text: #e2e8f0;
+    --app-muted: #94a3b8;
+    --app-border: rgba(0, 212, 255, 0.12);
+    --app-accent: #22d3ee;
+    --app-accent-subtle: rgba(34, 211, 238, 0.12);
+    --app-hover: rgba(255, 255, 255, 0.05);
+    --app-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+}
+
+[data-theme="light"] {
+    --app-bg: #eef2f7;
+    --app-surface: #ffffff;
+    --app-card: #ffffff;
+    --app-input: #f8fafc;
+    --app-text: #1e293b;
+    --app-muted: #64748b;
+    --app-border: #e2e8f0;
+    --app-accent: #0891b2;
+    --app-accent-subtle: rgba(8, 145, 178, 0.1);
+    --app-hover: rgba(15, 23, 42, 0.04);
+    --app-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    color-scheme: light;
+}
+
+.bg-app { background-color: var(--app-bg); }
+.bg-app-surface { background-color: var(--app-surface); }
+.bg-app-card { background-color: var(--app-card); }
+.bg-app-input { background-color: var(--app-input); }
+.text-app { color: var(--app-text); }
+.text-app-muted { color: var(--app-muted); }
+.border-app { border-color: var(--app-border); }
+
+/* Light theme — remap legacy dark utility colors inside page content */
+[data-theme="light"] .theme-scope [class*="0a0f1e"] { background-color: var(--app-bg) !important; }
+[data-theme="light"] .theme-scope [class*="0f172a"] { background-color: var(--app-input) !important; }
+[data-theme="light"] .theme-scope [class*="1a2540"] { background-color: var(--app-card) !important; }
+
+[data-theme="light"] .theme-scope .text-slate-200 { color: #334155 !important; }
+[data-theme="light"] .theme-scope .text-slate-300 { color: #475569 !important; }
+[data-theme="light"] .theme-scope .text-slate-400 { color: #64748b !important; }
+[data-theme="light"] .theme-scope .text-slate-500 { color: #64748b !important; }
+[data-theme="light"] .theme-scope .text-cyan-400 { color: #0891b2 !important; }
+[data-theme="light"] .theme-scope .text-amber-400 { color: #d97706 !important; }
+[data-theme="light"] .theme-scope .text-green-400 { color: #16a34a !important; }
+[data-theme="light"] .theme-scope .text-red-400 { color: #dc2626 !important; }
+[data-theme="light"] .theme-scope .text-purple-400 { color: #9333ea !important; }
+[data-theme="light"] .theme-scope .text-teal-400 { color: #0d9488 !important; }
+[data-theme="light"] .theme-scope .text-orange-300 { color: #ea580c !important; }
+
+[data-theme="light"] .theme-scope [class*="border-cyan-500"],
+[data-theme="light"] .theme-scope [class*="border-amber-500"],
+[data-theme="light"] .theme-scope [class*="border-purple-500"],
+[data-theme="light"] .theme-scope [class*="border-green-500"],
+[data-theme="light"] .theme-scope [class*="border-red-500"],
+[data-theme="light"] .theme-scope [class*="border-violet-500"],
+[data-theme="light"] .theme-scope [class*="border-teal-500"] {
+    border-color: var(--app-border) !important;
+}
+
+[data-theme="light"] .theme-scope input,
+[data-theme="light"] .theme-scope select,
+[data-theme="light"] .theme-scope textarea {
+    background-color: var(--app-input) !important;
+    color: var(--app-text) !important;
+    border-color: var(--app-border) !important;
+}
+
+[data-theme="light"] .theme-scope table thead { color: var(--app-muted) !important; }
+[data-theme="light"] .theme-scope .hover\:bg-white\/5:hover,
+[data-theme="light"] .theme-scope .hover\:bg-white\/\[0\.02\]:hover {
+    background-color: var(--app-hover) !important;
+}
+
+[data-theme="light"] .app-shell { box-shadow: none; }
+[data-theme="light"] .app-sidebar,
+[data-theme="light"] .app-header,
+[data-theme="light"] .app-drawer {
+    box-shadow: var(--app-shadow);
+}
+
+/* Unified toolbar — theme, language, notifications */
+.app-toolbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 12px;
+    border: 1px solid var(--app-border);
+    background-color: color-mix(in srgb, var(--app-card) 88%, transparent);
+    box-shadow: var(--app-shadow);
+    backdrop-filter: blur(8px);
+}
+
+.app-toolbar__divider {
+    width: 1px;
+    height: 20px;
+    margin-inline: 2px;
+    background-color: var(--app-border);
+    flex-shrink: 0;
+}
+
+.toolbar-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    color: var(--app-muted);
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.toolbar-btn:hover {
+    background-color: var(--app-hover);
+    color: var(--app-accent);
+}
+
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 8px;
+    background-color: var(--app-hover);
+}
+
+.lang-switcher__btn {
+    min-width: 34px;
+    height: 30px;
+    padding: 0 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--app-muted);
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.lang-switcher__btn:hover {
+    color: var(--app-text);
+}
+
+.lang-switcher__btn--active {
+    background-color: var(--app-accent-subtle);
+    color: var(--app-accent);
+}
+
+[data-theme="light"] .app-toolbar {
+    background-color: var(--app-surface);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+/* Light theme — shell (sidebar, header, drawer) */
+[data-theme="light"] .app-shell { background-color: var(--app-bg); color: var(--app-text); }
+[data-theme="light"] .app-sidebar,
+[data-theme="light"] .app-header,
+[data-theme="light"] .app-topbar,
+[data-theme="light"] .app-drawer {
+    background-color: var(--app-surface) !important;
+    border-color: var(--app-border) !important;
+}
+[data-theme="light"] .app-sidebar .text-slate-400,
+[data-theme="light"] .app-header .text-slate-400,
+[data-theme="light"] .app-drawer .text-slate-400 { color: var(--app-muted) !important; }
+[data-theme="light"] .app-sidebar .text-slate-500,
+[data-theme="light"] .app-header .text-slate-500,
+[data-theme="light"] .app-drawer .text-slate-500 { color: var(--app-muted) !important; }
+[data-theme="light"] .app-sidebar .text-cyan-400,
+[data-theme="light"] .app-header .text-cyan-400 { color: var(--app-accent) !important; }
+[data-theme="light"] .app-sidebar .hover\:bg-white\/5:hover,
+[data-theme="light"] .app-header .hover\:bg-white\/5:hover,
+[data-theme="light"] .app-drawer .hover\:bg-white\/5:hover {
+    background-color: var(--app-hover) !important;
+}

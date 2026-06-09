@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@import './theme.css';
+
+@theme {
+    --font-sans: 'Cairo', 'Tajawal', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #00d4ff;
+    --color-secondary: #f6ad55;
+    --color-surface: #1a2540;
+    --color-bg: #0a0f1e;
+}
+
+body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* iOS safe areas for bottom nav */
+.safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Touch-friendly inputs on mobile */
+@media (max-width: 767px) {
+    input, select, textarea, button {
+        font-size: 16px;
+    }
+
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Responsive data table → cards on mobile */
+@media (max-width: 767px) {
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tbody tr {
+        display: block;
+        margin-bottom: 0.75rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(0, 212, 255, 0.1);
+        background: #1a2540;
+        padding: 0.75rem;
+    }
+
+    .responsive-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding: 0.35rem 0;
+        border: none;
+        text-align: right;
+    }
+
+    .responsive-table tbody td::before {
+        content: attr(data-label);
+        color: #94a3b8;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+    }
+}

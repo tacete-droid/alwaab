@@ -1,0 +1,5 @@
+js/erp-config.js
+*.pdf
+*.csv
+*.zip
+.sixth/

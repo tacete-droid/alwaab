@@ -1,0 +1,41 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+alwaab-website/js/erp-config.js
+
+# ERP (Laravel)
+alwaab-erp/vendor/
+alwaab-erp/node_modules/
+alwaab-erp/public/build/
+alwaab-erp/public/hot
+alwaab-erp/public/storage
+alwaab-erp/storage/*.key
+alwaab-erp/.phpunit.cache
+alwaab-erp/.phpunit.result.cache
+
+# Website junk / business files
+alwaab-website/*.pdf
+alwaab-website/*.csv
+alwaab-website/*.zip
+alwaab-website/.sixth/
+
+# Mobile
+alwaab-mobile/.dart_tool/
+alwaab-mobile/build/
+alwaab-mobile/.flutter-plugins
+alwaab-mobile/.flutter-plugins-dependencies
+
+# IDE / OS
+.idea/
+.vscode/
+.fleet/
+*.log
+Thumbs.db
+Desktop.ini
+
+# Archives
+*.zip
+
+# Generated at deploy
+docker/nginx/production.conf

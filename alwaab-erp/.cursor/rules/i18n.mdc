@@ -1,0 +1,38 @@
+---
+description: Bilingual i18n rules for ALWAAB ERP — always add Arabic and English translations
+globs: resources/js/**/*.vue, lang/**/*.php
+alwaysApply: false
+---
+
+# ALWAAB ERP — Internationalization (i18n)
+
+The system is fully bilingual (Arabic / English). Every UI change MUST include both languages.
+
+## Vue components
+
+- NEVER hardcode Arabic or English UI strings in `.vue` files
+- Import and use: `import { useLocale } from '@/composables/useLocale';`
+- Use `const { t, dir, displayName, formatMoney, formatNumber, formatDate } = useLocale();`
+- Template strings: `{{ t('module.key') }}` — never literal text for labels, buttons, headings, placeholders (except email examples)
+- Layout direction: `:dir="dir"` on page roots (layouts handle this)
+- Entity names: `displayName(entity)` — never inline `name_ar`/`name_en` ternaries
+- Numbers/dates: `formatMoney()`, `formatNumber()`, `formatDate()` — never `toLocaleString('ar-AE')`
+- Table alignment: use `text-start` / `text-end` (logical), not `text-right`/`text-left`
+- Confirm dialogs: `t('ui.confirm_*')`
+
+## Translation files
+
+- Add keys to BOTH `lang/ar/{module}.php` AND `lang/en/{module}.php`
+- Key naming: `module.descriptive_key` (snake_case)
+- Modules: `nav`, `layout`, `ui`, `crm`, `hr`, `invoices`, `quotations`, `chat`, `reports`, `dashboard`, `catalog`, `portal`, `profile`, `settings`, `notifications`
+- Translations are auto-shared to Vue via Inertia `translations` prop — no extra wiring needed
+
+## Backend flash messages
+
+- Use `__('module.key')` in PHP controllers/services
+- Add the key to both ar/en lang files
+
+## Language switcher
+
+- Header switcher posts to `POST /locale` — do not build custom locale logic
+- Sidebar position flips automatically via `dir` attribute (RTL = right, LTR = left)

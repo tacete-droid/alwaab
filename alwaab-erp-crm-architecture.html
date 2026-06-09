@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALWAAB ERP+CRM – System Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0f1e;
+  --bg2: #0f172a;
+  --bg3: #1e293b;
+  --bg4: #263347;
+  --surface: #1a2540;
+  --border: rgba(99,179,237,0.15);
+  --border2: rgba(99,179,237,0.25);
+  --cyan: #00d4ff;
+  --cyan2: #63b3ed;
+  --gold: #f6ad55;
+  --gold2: #ed8936;
+  --green: #48bb78;
+  --red: #fc8181;
+  --purple: #9f7aea;
+  --orange: #fb923c;
+  --teal: #38bdf8;
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --text3: #64748b;
+  --font: 'Cairo', 'Tajawal', sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7;direction:rtl}
+.en{direction:ltr;font-family:'Cairo',sans-serif}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 2rem}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:1400px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:700;color:var(--cyan)}
+.nav-logo .dot{width:8px;height:8px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
+.nav-links{display:flex;gap:4px;overflow-x:auto}
+.nav-links a{padding:6px 12px;border-radius:6px;font-size:0.78rem;color:var(--text2);text-decoration:none;white-space:nowrap;transition:all .2s}
+.nav-links a:hover{color:var(--cyan);background:rgba(0,212,255,0.08)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,#0a0f1e 0%,#0f172a 50%,#1a1f3a 100%);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(0,212,255,0.07),transparent)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.25);border-radius:20px;padding:6px 16px;font-size:0.75rem;color:var(--cyan);margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.2;margin-bottom:0.75rem}
+.hero h1 span{color:var(--cyan)}
+.hero .subtitle{font-size:1.05rem;color:var(--text2);max-width:700px;margin:0 auto 1.5rem}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:1.5rem}
+.tag{background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;font-size:0.72rem;color:var(--text2)}
+.tag.cyan{border-color:rgba(0,212,255,0.3);color:var(--cyan)}
+.tag.gold{border-color:rgba(246,173,85,0.3);color:var(--gold)}
+
+/* Sections */
+.section{max-width:1400px;margin:0 auto;padding:4rem 2rem}
+.section-header{margin-bottom:2.5rem}
+.section-num{font-size:0.72rem;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-bottom:0.5rem}
+.section-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:0.5rem}
+.section-sub{color:var(--text2);font-size:0.9rem}
+.divider{height:1px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0.2;margin:0}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;transition:border-color .2s}
+.card:hover{border-color:var(--border2)}
+.card-title{font-size:0.85rem;font-weight:700;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.card-title .icon{width:28px;height:28px;background:rgba(0,212,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9rem}
+
+/* Grids */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+
+/* Arch diagram */
+.arch-layer{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:1rem}
+.arch-layer-title{background:var(--bg3);padding:10px 16px;font-size:0.78rem;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.arch-layer-body{padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px}
+.arch-chip{background:var(--bg4);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:0.75rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px}
+.arch-chip .dot{width:6px;height:6px;border-radius:50%}
+.dot-cyan{background:var(--cyan)}
+.dot-gold{background:var(--gold)}
+.dot-green{background:var(--green)}
+.dot-purple{background:var(--purple)}
+.dot-red{background:var(--red)}
+.dot-orange{background:var(--orange)}
+.dot-teal{background:var(--teal)}
+
+/* Tables */
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:0.82rem}
+th{background:var(--bg3);padding:10px 14px;text-align:right;font-size:0.72rem;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border)}
+td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,0.02)}
+
+/* Badges */
+.badge{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:0.68rem;font-weight:600}
+.badge-cyan{background:rgba(0,212,255,0.12);color:var(--cyan);border:1px solid rgba(0,212,255,0.2)}
+.badge-gold{background:rgba(246,173,85,0.12);color:var(--gold);border:1px solid rgba(246,173,85,0.2)}
+.badge-green{background:rgba(72,187,120,0.12);color:var(--green);border:1px solid rgba(72,187,120,0.2)}
+.badge-red{background:rgba(252,129,129,0.12);color:var(--red);border:1px solid rgba(252,129,129,0.2)}
+.badge-purple{background:rgba(159,122,234,0.12);color:var(--purple);border:1px solid rgba(159,122,234,0.2)}
+.badge-orange{background:rgba(251,146,60,0.12);color:var(--orange);border:1px solid rgba(251,146,60,0.2)}
+
+/* Module cards */
+.module-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .25s;cursor:default}
+.module-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.module-header{padding:1.25rem 1.25rem 0.75rem;display:flex;align-items:flex-start;gap:12px}
+.module-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0}
+.module-info .name{font-size:0.9rem;font-weight:700;margin-bottom:2px}
+.module-info .desc{font-size:0.75rem;color:var(--text2);line-height:1.5}
+.module-features{padding:0 1.25rem 1.25rem}
+.module-features ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.module-features li{font-size:0.75rem;color:var(--text2);padding:4px 0;border-top:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;gap:8px}
+.module-features li::before{content:'›';color:var(--cyan);font-weight:700;flex-shrink:0}
+
+/* Role table */
+.role-check{color:var(--green);font-weight:700}
+.role-x{color:var(--text3)}
+.role-partial{color:var(--gold)}
+
+/* API section */
+.api-group{margin-bottom:1.5rem}
+.api-group-title{font-size:0.78rem;font-weight:700;color:var(--gold);margin-bottom:0.75rem;display:flex;align-items:center;gap:8px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.api-item{background:var(--bg3);border-radius:8px;padding:10px 14px;margin-bottom:6px;display:flex;align-items:center;gap:10px;font-size:0.78rem}
+.method{font-family:'Cairo',monospace;font-size:0.68rem;font-weight:700;padding:3px 8px;border-radius:4px;min-width:52px;text-align:center}
+.get{background:rgba(72,187,120,0.15);color:var(--green)}
+.post{background:rgba(0,212,255,0.15);color:var(--cyan)}
+.put{background:rgba(246,173,85,0.15);color:var(--gold)}
+.delete{background:rgba(252,129,129,0.15);color:var(--red)}
+.api-path{font-family:'Cairo',monospace;font-size:0.78rem;color:var(--text2);flex:1}
+.api-desc{font-size:0.72rem;color:var(--text3)}
+
+/* Timeline */
+.timeline{position:relative;padding-right:1.5rem}
+.timeline::before{content:'';position:absolute;right:0;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,var(--cyan),var(--gold),var(--purple));border-radius:2px}
+.timeline-item{position:relative;padding-right:2rem;margin-bottom:1.75rem}
+.timeline-item::before{content:'';position:absolute;right:-6px;top:6px;width:14px;height:14px;border-radius:50%;border:2px solid var(--bg);z-index:1}
+.timeline-item.phase-1::before{background:var(--cyan)}
+.timeline-item.phase-2::before{background:var(--gold)}
+.timeline-item.phase-3::before{background:var(--purple)}
+.timeline-item.phase-4::before{background:var(--green)}
+.timeline-phase{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
+.timeline-item.phase-1 .timeline-phase{color:var(--cyan)}
+.timeline-item.phase-2 .timeline-phase{color:var(--gold)}
+.timeline-item.phase-3 .timeline-phase{color:var(--purple)}
+.timeline-item.phase-4 .timeline-phase{color:var(--green)}
+.timeline-title{font-size:0.9rem;font-weight:700;margin-bottom:4px}
+.timeline-desc{font-size:0.78rem;color:var(--text2)}
+.timeline-tasks{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.timeline-task{background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:3px 9px;font-size:0.7rem;color:var(--text2)}
+
+/* ERD */
+.erd-table{background:var(--surface);border:1px solid var(--border2);border-radius:10px;overflow:hidden;min-width:180px}
+.erd-header{background:var(--bg3);padding:8px 12px;font-size:0.75rem;font-weight:700;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border)}
+.erd-field{padding:6px 12px;font-size:0.72rem;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.04);display:flex;justify-content:space-between;gap:8px}
+.erd-field:last-child{border-bottom:none}
+.erd-type{color:var(--text3);font-size:0.68rem}
+.erd-pk{color:var(--gold)}
+.erd-fk{color:var(--purple)}
+.erd-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+
+/* Field visit flow */
+.flow-step{display:flex;align-items:flex-start;gap:14px;padding:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:8px}
+.flow-num{width:32px;height:32px;background:rgba(0,212,255,0.1);border:1px solid rgba(0,212,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:var(--cyan);flex-shrink:0}
+.flow-content .title{font-size:0.85rem;font-weight:700;margin-bottom:2px}
+.flow-content .desc{font-size:0.75rem;color:var(--text2)}
+
+/* UI wireframe mockup */
+.mockup{background:#111827;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.08)}
+.mockup-bar{background:#1f2937;height:36px;display:flex;align-items:center;padding:0 12px;gap:6px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.mockup-dot{width:8px;height:8px;border-radius:50%}
+.mockup-sidebar{background:#111827;border-left:1px solid rgba(255,255,255,0.06);width:220px;flex-shrink:0;padding:12px}
+.mockup-sidebar-item{padding:7px 10px;border-radius:6px;font-size:0.72rem;color:#94a3b8;display:flex;align-items:center;gap:8px;margin-bottom:2px;cursor:default}
+.mockup-sidebar-item.active{background:rgba(0,212,255,0.1);color:var(--cyan)}
+.mockup-main{flex:1;padding:16px;min-height:300px}
+.mockup-inner{display:flex;height:400px}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.kpi-card{background:#1f2937;border-radius:8px;padding:12px;border:1px solid rgba(255,255,255,0.06)}
+.kpi-label{font-size:0.62rem;color:#64748b;margin-bottom:4px}
+.kpi-value{font-size:1.1rem;font-weight:700;color:#e2e8f0}
+.kpi-change{font-size:0.62rem;color:#48bb78;margin-top:2px}
+
+/* Security */
+.security-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:8px}
+.security-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+
+/* Footer */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:0.78rem;color:var(--text3)}
+footer strong{color:var(--text2)}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px}
+
+/* Responsive */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .mockup-sidebar{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="dot"></div>
+      <span>ALWAAB ERP+CRM</span>
+    </div>
+    <div class="nav-links en">
+      <a href="#architecture">Architecture</a>
+      <a href="#modules">Modules</a>
+      <a href="#erd">ERD</a>
+      <a href="#roles">Roles</a>
+      <a href="#api">API</a>
+      <a href="#field-visit">Field Visit</a>
+      <a href="#ui">UI</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#security">Security</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">
+    <span>🏗️</span>
+    <span class="en">Enterprise System Architecture Document v1.0</span>
+  </div>
+  <h1>نظام <span>ALWAAB</span><br>للإدارة والعملاء المتكامل</h1>
+  <p class="subtitle">منصة سحابية متكاملة لإدارة موارد المؤسسة وإدارة علاقات العملاء — مخصصة لشركة الوعاب لأنظمة أنابيب CPVC المعتمدة</p>
+  <div class="hero-tags">
+    <span class="tag cyan en">Laravel 12 + PHP 8.4</span>
+    <span class="tag cyan en">Vue 3 + Inertia.js</span>
+    <span class="tag cyan en">PostgreSQL + Redis</span>
+    <span class="tag cyan en">Flutter Mobile</span>
+    <span class="tag gold en">AWS S3 + Google Maps</span>
+    <span class="tag gold">ثنائي اللغة عربي / إنجليزي</span>
+    <span class="tag gold">RTL + LTR</span>
+    <span class="tag en">Laravel Reverb + Horizon</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 1. SYSTEM ARCHITECTURE ═══════════════════ -->
+<section id="architecture" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الأول / Section 01</div>
+    <h2 class="section-title">معمارية النظام — System Architecture</h2>
+    <p class="section-sub">بنية سحابية متعددة الطبقات قابلة للتوسع — Multi-tier scalable cloud architecture</p>
+  </div>
+
+  <!-- Layers -->
+  <div style="margin-bottom:2rem">
+
+    <div class="arch-layer">
+      <div class="arch-layer-title">🌐 طبقة العملاء — Client Layer</div>
+      <div class="arch-layer-body">
+        <div class="arch-chip"><span class="dot dot-cyan"></span>Vue 3 + Inertia.js Web App</div>
+        <div class="arch-chip"><span class="dot dot-cyan"></span>Flutter Android App</div>
+        <div class="arch-chip"><span class="dot dot-cyan"></span>Flutter iOS App</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>Customer Portal (Vue 3)</div>
+        <div class="arch-chip"><span class="dot dot-teal"></span>Tailwind CSS + Cairo/Tajawal Fonts</div>
+        <div class="arch-chip"><span class="dot dot-teal"></span>RTL/LTR Bilingual UI</div>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-title">🔒 طبقة الأمان والبوابة — Security & Gateway Layer</div>
+      <div class="arch-layer-body">
+        <div class="arch-chip"><span class="dot dot-red"></span>Cloudflare CDN + WAF</div>
+        <div class="arch-chip"><span class="dot dot-red"></span>SSL/TLS Termination</div>
+        <div class="arch-chip"><span class="dot dot-red"></span>Nginx Reverse Proxy</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>Laravel Sanctum (SPA Auth)</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>API Rate Limiting</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>CORS Policy</div>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-title">⚙️ طبقة التطبيق — Application Layer</div>
+      <div class="arch-layer-body">
+        <div class="arch-chip"><span class="dot dot-cyan"></span>Laravel 12 Core API</div>
+        <div class="arch-chip"><span class="dot dot-cyan"></span>PHP 8.4 (JIT)</div>
+        <div class="arch-chip"><span class="dot dot-cyan"></span>Inertia.js SSR Bridge</div>
+        <div class="arch-chip"><span class="dot dot-purple"></span>Laravel Reverb (WebSocket)</div>
+        <div class="arch-chip"><span class="dot dot-purple"></span>Laravel Horizon (Queue Monitor)</div>
+        <div class="arch-chip"><span class="dot dot-orange"></span>Queue Workers (Redis)</div>
+        <div class="arch-chip"><span class="dot dot-green"></span>Notification Engine</div>
+        <div class="arch-chip"><span class="dot dot-green"></span>PDF/Report Generator</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>GPS / Map Service</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>Watermark Service</div>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-title">🗄️ طبقة البيانات — Data Layer</div>
+      <div class="arch-layer-body">
+        <div class="arch-chip"><span class="dot dot-cyan"></span>PostgreSQL 16 (Primary)</div>
+        <div class="arch-chip"><span class="dot dot-cyan"></span>PostgreSQL Read Replica</div>
+        <div class="arch-chip"><span class="dot dot-red"></span>Redis 7 (Cache + Sessions + Queues)</div>
+        <div class="arch-chip"><span class="dot dot-gold"></span>AWS S3 Compatible Storage</div>
+        <div class="arch-chip"><span class="dot dot-green"></span>Eloquent ORM + Query Builder</div>
+        <div class="arch-chip"><span class="dot dot-purple"></span>Database Migrations + Seeders</div>
+      </div>
+    </div>
+
+    <div class="arch-layer">
+      <div class="arch-layer-title">📊 طبقة المراقبة — Monitoring Layer</div>
+      <div class="arch-layer-body">
+        <div class="arch-chip"><span class="dot dot-orange"></span>Laravel Telescope (Dev)</div>
+        <div class="arch-chip"><span class="dot dot-orange"></span>Sentry Error Tracking</div>
+        <div class="arch-chip"><span class="dot dot-green"></span>Prometheus + Grafana</div>
+        <div class="arch-chip"><span class="dot dot-teal"></span>Audit Log System</div>
+        <div class="arch-chip"><span class="dot dot-teal"></span>Activity Log System</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Design Decisions -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title"><div class="icon">🏛️</div>Clean Architecture Pattern</div>
+      <ul style="list-style:none;font-size:0.78rem;color:var(--text2);display:flex;flex-direction:column;gap:6px">
+        <li>› Domain-Driven Design (DDD) — تصميم قائم على النطاق</li>
+        <li>› Repository Pattern for data access</li>
+        <li>› Service Layer for business logic</li>
+        <li>› Form Requests for validation</li>
+        <li>› Actions / Use-Cases pattern</li>
+        <li>› Event-Driven architecture with Listeners</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><div class="icon">🌍</div>Bilingual Architecture — ثنائية اللغة</div>
+      <ul style="list-style:none;font-size:0.78rem;color:var(--text2);display:flex;flex-direction:column;gap:6px">
+        <li>› Laravel lang files (ar / en)</li>
+        <li>› Spatie Laravel Translatable (model translations)</li>
+        <li>› Vue i18n for frontend strings</li>
+        <li>› RTL/LTR toggle in Tailwind (dir attribute)</li>
+        <li>› Google Fonts: Cairo (AR) + Inter (EN)</li>
+        <li>› Locale stored per-user in DB</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 2. DATABASE ERD ═══════════════════ -->
+<section id="erd" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الثاني / Section 02</div>
+    <h2 class="section-title">مخطط قاعدة البيانات — Database ERD & Schema</h2>
+    <p class="section-sub">الجداول الرئيسية والعلاقات — Core tables, relationships, and key fields</p>
+  </div>
+
+  <!-- Core Tables -->
+  <h3 style="font-size:0.85rem;font-weight:700;color:var(--gold);margin-bottom:1rem">👤 المستخدمون والعملاء — Users & CRM</h3>
+  <div class="erd-grid" style="margin-bottom:2rem">
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--cyan)">🔑 users</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>name_ar</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>name_en</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>email</span><span class="erd-type">string unique</span></div>
+      <div class="erd-field"><span>phone</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span class="erd-fk">role_id</span><span class="erd-type">FK → roles</span></div>
+      <div class="erd-field"><span>locale</span><span class="erd-type">enum(ar,en)</span></div>
+      <div class="erd-field"><span>is_active</span><span class="erd-type">boolean</span></div>
+      <div class="erd-field"><span>last_login_at</span><span class="erd-type">timestamp</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--gold)">🏢 contacts (CRM)</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>type</span><span class="erd-type">enum(customer, consultant, contractor, developer, lead)</span></div>
+      <div class="erd-field"><span>name_ar / name_en</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>company</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>email / phone</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>emirate</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum</span></div>
+      <div class="erd-field"><span class="erd-fk">assigned_to</span><span class="erd-type">FK → users</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--purple)">📋 leads</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span class="erd-fk">contact_id</span><span class="erd-type">FK → contacts</span></div>
+      <div class="erd-field"><span>source</span><span class="erd-type">enum</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum(new, qualified, proposal, won, lost)</span></div>
+      <div class="erd-field"><span>value_aed</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>probability</span><span class="erd-type">integer 0-100</span></div>
+      <div class="erd-field"><span>expected_close</span><span class="erd-type">date</span></div>
+      <div class="erd-field"><span class="erd-fk">assigned_to</span><span class="erd-type">FK → users</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--green)">📅 activities</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>subject_type</span><span class="erd-type">morphable type</span></div>
+      <div class="erd-field"><span>subject_id</span><span class="erd-type">morphable id</span></div>
+      <div class="erd-field"><span>type</span><span class="erd-type">enum(call, meeting, email, visit, task)</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum</span></div>
+      <div class="erd-field"><span>due_at</span><span class="erd-type">timestamp</span></div>
+      <div class="erd-field"><span>notes</span><span class="erd-type">text</span></div>
+      <div class="erd-field"><span class="erd-fk">user_id</span><span class="erd-type">FK → users</span></div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;font-weight:700;color:var(--gold);margin-bottom:1rem">🏗️ المشاريع والمخزون — Projects & Inventory</h3>
+  <div class="erd-grid" style="margin-bottom:2rem">
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--teal)">🏗️ projects</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>name_ar / name_en</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>location</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>lat / lng</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum(prospecting, active, completed, on_hold)</span></div>
+      <div class="erd-field"><span>value_aed</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>start_date / end_date</span><span class="erd-type">date</span></div>
+      <div class="erd-field"><span class="erd-fk">consultant_id</span><span class="erd-type">FK → contacts</span></div>
+      <div class="erd-field"><span class="erd-fk">contractor_id</span><span class="erd-type">FK → contacts</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--orange)">📦 products</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>sku</span><span class="erd-type">string unique</span></div>
+      <div class="erd-field"><span>name_ar / name_en</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span class="erd-fk">category_id</span><span class="erd-type">FK → product_categories</span></div>
+      <div class="erd-field"><span>type</span><span class="erd-type">enum(pipe, fitting, valve, adhesive)</span></div>
+      <div class="erd-field"><span>size / pressure_rating</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>price_aed</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>datasheet_url</span><span class="erd-type">string (S3)</span></div>
+      <div class="erd-field"><span>certifications</span><span class="erd-type">json array</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--red)">🏭 warehouses</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>name_ar / name_en</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>location</span><span class="erd-type">string</span></div>
+      <div class="erd-field"><span>lat / lng</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>is_active</span><span class="erd-type">boolean</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--green)">📊 inventory</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span class="erd-fk">product_id</span><span class="erd-type">FK → products</span></div>
+      <div class="erd-field"><span class="erd-fk">warehouse_id</span><span class="erd-type">FK → warehouses</span></div>
+      <div class="erd-field"><span>qty_on_hand</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>qty_reserved</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>reorder_point</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>unit</span><span class="erd-type">string</span></div>
+    </div>
+  </div>
+
+  <h3 style="font-size:0.85rem;font-weight:700;color:var(--gold);margin-bottom:1rem">📝 العروض والزيارات الميدانية — Quotations & Field Visits</h3>
+  <div class="erd-grid">
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--cyan)">📄 quotations</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span>number</span><span class="erd-type">string unique</span></div>
+      <div class="erd-field"><span class="erd-fk">contact_id</span><span class="erd-type">FK → contacts</span></div>
+      <div class="erd-field"><span class="erd-fk">project_id</span><span class="erd-type">FK → projects</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum(draft,sent,approved,rejected,expired)</span></div>
+      <div class="erd-field"><span>version</span><span class="erd-type">integer</span></div>
+      <div class="erd-field"><span>total_aed</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>valid_until</span><span class="erd-type">date</span></div>
+      <div class="erd-field"><span class="erd-fk">approved_by</span><span class="erd-type">FK → users</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--gold)">📷 field_visits</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span class="erd-fk">project_id</span><span class="erd-type">FK → projects</span></div>
+      <div class="erd-field"><span class="erd-fk">employee_id</span><span class="erd-type">FK → users</span></div>
+      <div class="erd-field"><span>lat / lng</span><span class="erd-type">decimal (GPS)</span></div>
+      <div class="erd-field"><span>visited_at</span><span class="erd-type">timestamp</span></div>
+      <div class="erd-field"><span>notes</span><span class="erd-type">text</span></div>
+      <div class="erd-field"><span>status</span><span class="erd-type">enum</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--purple)">🖼️ visit_photos</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span class="erd-fk">visit_id</span><span class="erd-type">FK → field_visits</span></div>
+      <div class="erd-field"><span>original_url</span><span class="erd-type">string (S3)</span></div>
+      <div class="erd-field"><span>watermarked_url</span><span class="erd-type">string (S3)</span></div>
+      <div class="erd-field"><span>lat / lng</span><span class="erd-type">decimal</span></div>
+      <div class="erd-field"><span>taken_at</span><span class="erd-type">timestamp</span></div>
+      <div class="erd-field"><span>watermark_text</span><span class="erd-type">json</span></div>
+    </div>
+
+    <div class="erd-table">
+      <div class="erd-header" style="color:var(--teal)">💬 messages</div>
+      <div class="erd-field"><span class="erd-pk">id</span><span class="erd-type">uuid PK</span></div>
+      <div class="erd-field"><span class="erd-fk">conversation_id</span><span class="erd-type">FK → conversations</span></div>
+      <div class="erd-field"><span class="erd-fk">sender_id</span><span class="erd-type">FK → users</span></div>
+      <div class="erd-field"><span>body</span><span class="erd-type">text</span></div>
+      <div class="erd-field"><span>type</span><span class="erd-type">enum(text,file,image)</span></div>
+      <div class="erd-field"><span>attachment_url</span><span class="erd-type">string (S3)</span></div>
+      <div class="erd-field"><span>read_at</span><span class="erd-type">timestamp</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 3. MODULES ═══════════════════ -->
+<section id="modules" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الثالث / Section 03</div>
+    <h2 class="section-title">الوحدات الرئيسية — System Modules</h2>
+    <p class="section-sub">تسعة وحدات متكاملة تغطي جميع عمليات الشركة — Nine integrated modules covering all business operations</p>
+  </div>
+
+  <div class="grid-3">
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(0,212,255,0.1)">📊</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--cyan)">لوحة التحكم — Dashboard</div>
+          <div class="desc">KPIs ومؤشرات الأداء الرئيسية في الوقت الفعلي</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>مبيعات YTD، هدف الشهر، نسبة الإنجاز</li>
+          <li>إجمالي المشاريع النشطة وخريطة التوزيع</li>
+          <li>مستوى المخزون — تنبيهات إعادة الطلب</li>
+          <li>نشاط الموظفين وآخر تسجيل دخول</li>
+          <li>المهام القادمة والاجتماعات اليوم</li>
+          <li>Real-time via Laravel Reverb WebSocket</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(246,173,85,0.1)">👥</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--gold)">إدارة العلاقات — CRM</div>
+          <div class="desc">العملاء والمستشارين والمقاولين والمطورين</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Leads Pipeline — خط أنابيب العملاء المحتملين</li>
+          <li>Contact Profiles + Timeline Activity</li>
+          <li>Meetings Scheduler + Calendar Sync</li>
+          <li>Follow-up Reminders (Notifications)</li>
+          <li>Consultant & Contractor Tracking</li>
+          <li>Customer Segmentation + Tags</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(56,189,248,0.1)">🏗️</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--teal)">المشاريع — Projects</div>
+          <div class="desc">قاعدة بيانات المشاريع والتتبع الكامل</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Project Database + Status Tracking</li>
+          <li>Consultant & Contractor Assignment</li>
+          <li>Opportunity Value + Forecast</li>
+          <li>Project Timeline (Gantt View)</li>
+          <li>Google Maps Integration</li>
+          <li>Document Attachments (S3)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(72,187,120,0.1)">📦</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--green)">كتالوج المنتجات — Catalog</div>
+          <div class="desc">FlowGuard CPVC — أنابيب وتوصيلات معتمدة</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Product Database + Categories</li>
+          <li>Technical Specifications + Datasheets (PDF)</li>
+          <li>Certifications (FM, NSF, UL, BS)</li>
+          <li>Multiple Product Images (S3)</li>
+          <li>Download Center for Customers</li>
+          <li>BIM Files + Technical Documents</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(159,122,234,0.1)">📝</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--purple)">طلبات العروض — RFQ & Quotations</div>
+          <div class="desc">BOQ وعروض أسعار مع تدفق الموافقة</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Customer RFQ Submission (Portal)</li>
+          <li>BOQ Upload + Auto-parse (Excel/PDF)</li>
+          <li>Smart Quotation Generator</li>
+          <li>Approval Workflow (Multi-level)</li>
+          <li>Version Tracking + Comparison</li>
+          <li>PDF Export + Email Delivery</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(251,146,60,0.1)">🏭</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--orange)">المخزون — Inventory</div>
+          <div class="desc">مستودعات متعددة وحركة المخزون</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Multi-Warehouse Management</li>
+          <li>Real-time Stock Levels</li>
+          <li>Stock Movements (In/Out/Transfer)</li>
+          <li>Delivery Management</li>
+          <li>Purchase Orders</li>
+          <li>Low-Stock Alerts + Reorder</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(252,129,129,0.1)">📍</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--red)">الزيارات الميدانية — Field Visits</div>
+          <div class="desc">GPS + صور موقع بعلامة مائية وتوثيق</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>GPS Coordinate Capture (Flutter)</li>
+          <li>Photo Capture + Watermark Overlay</li>
+          <li>Timestamp + Employee Auto-attach</li>
+          <li>Geo-tagged Site Photos (S3)</li>
+          <li>Visit History + Reports</li>
+          <li>Management Map View (Google Maps)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(0,212,255,0.08)">💬</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--cyan)">التواصل الداخلي — Chat</div>
+          <div class="desc">دردشة فردية وجماعية في الوقت الفعلي</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Direct (1-on-1) Messaging</li>
+          <li>Group Channels + Departments</li>
+          <li>File & Image Sharing (S3)</li>
+          <li>Real-time via Laravel Reverb</li>
+          <li>Push Notifications (FCM/APNs)</li>
+          <li>Message Read Receipts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="module-card">
+      <div class="module-header">
+        <div class="module-icon" style="background:rgba(72,187,120,0.08)">👨‍💼</div>
+        <div class="module-info">
+          <div class="name" style="color:var(--green)">الموارد البشرية — HR</div>
+          <div class="desc">الموظفون والحضور والإجازات والرواتب</div>
+        </div>
+      </div>
+      <div class="module-features">
+        <ul>
+          <li>Employee Profiles + Documents</li>
+          <li>Attendance Tracking (GPS Check-in)</li>
+          <li>Leave Requests + Approval Flow</li>
+          <li>Payroll-ready Structure</li>
+          <li>Performance Reviews</li>
+          <li>Org Chart</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Customer Portal -->
+  <div style="margin-top:2rem;background:var(--bg3);border:1px solid var(--border2);border-radius:14px;padding:1.75rem">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem">
+      <div style="width:44px;height:44px;background:rgba(246,173,85,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem">🌐</div>
+      <div>
+        <div style="font-size:1rem;font-weight:700;color:var(--gold)">بوابة العملاء — Customer Portal</div>
+        <div style="font-size:0.78rem;color:var(--text2)">واجهة خارجية للعملاء — External self-service interface</div>
+      </div>
+    </div>
+    <div class="grid-4" style="margin-top:0">
+      <div style="background:var(--surface);border-radius:8px;padding:10px 12px;font-size:0.75rem">
+        <div style="color:var(--cyan);font-weight:700;margin-bottom:4px">📦 Product Browsing</div>
+        <div style="color:var(--text2)">تصفح الكتالوج وتحميل الـ Datasheets</div>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:10px 12px;font-size:0.75rem">
+        <div style="color:var(--gold);font-weight:700;margin-bottom:4px">📋 RFQ Submission</div>
+        <div style="color:var(--text2)">إرسال طلبات عروض الأسعار + رفع BOQ</div>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:10px 12px;font-size:0.75rem">
+        <div style="color:var(--green);font-weight:700;margin-bottom:4px">📊 Quotation Tracking</div>
+        <div style="color:var(--text2)">متابعة حالة العروض وتاريخها</div>
+      </div>
+      <div style="background:var(--surface);border-radius:8px;padding:10px 12px;font-size:0.75rem">
+        <div style="color:var(--purple);font-weight:700;margin-bottom:4px">🎫 Support Requests</div>
+        <div style="color:var(--text2)">تذاكر الدعم الفني والاستفسارات</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 4. ROLES & PERMISSIONS ═══════════════════ -->
+<section id="roles" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الرابع / Section 04</div>
+    <h2 class="section-title">الأدوار والصلاحيات — Roles & Permissions</h2>
+    <p class="section-sub">نظام صلاحيات قائم على الأدوار — Spatie Laravel-Permission RBAC</p>
+  </div>
+
+  <!-- Role descriptions -->
+  <div class="grid-3" style="margin-bottom:2rem">
+    <div class="card"><div class="card-title"><span class="badge badge-red">Super Admin</span></div><p style="font-size:0.78rem;color:var(--text2)">وصول كامل لجميع الوحدات والإعدادات. مسؤول النظام الأعلى.</p></div>
+    <div class="card"><div class="card-title"><span class="badge badge-cyan">Manager</span></div><p style="font-size:0.78rem;color:var(--text2)">إدارة الفريق، الموافقة على العروض، تقارير شاملة. بدون حذف البيانات الحرجة.</p></div>
+    <div class="card"><div class="card-title"><span class="badge badge-gold">Sales Rep</span></div><p style="font-size:0.78rem;color:var(--text2)">إدارة العملاء والمشاريع والعروض. لا صلاحية لإدارة المستخدمين أو الرواتب.</p></div>
+    <div class="card"><div class="card-title"><span class="badge badge-green">Field Officer</span></div><p style="font-size:0.78rem;color:var(--text2)">تسجيل زيارات ميدانية، تصوير، تحديث حالة المشروع. وصول موبايل فقط.</p></div>
+    <div class="card"><div class="card-title"><span class="badge badge-purple">Warehouse Staff</span></div><p style="font-size:0.78rem;color:var(--text2)">إدارة المخزون والحركات والاستلام والتسليم.</p></div>
+    <div class="card"><div class="card-title"><span class="badge badge-orange">Customer (Portal)</span></div><p style="font-size:0.78rem;color:var(--text2)">وصول محدود لبوابة العملاء فقط — RFQ, Catalog, Support.</p></div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>الوحدة / Module</th>
+          <th style="color:var(--red)">Super Admin</th>
+          <th style="color:var(--cyan)">Manager</th>
+          <th style="color:var(--gold)">Sales Rep</th>
+          <th style="color:var(--green)">Field Officer</th>
+          <th style="color:var(--purple)">Warehouse</th>
+          <th style="color:var(--orange)">Customer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Dashboard — لوحة التحكم</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-partial">◐ Own</td><td class="role-partial">◐ Limited</td><td class="role-partial">◐ Inventory</td><td class="role-x">—</td></tr>
+        <tr><td>CRM — العملاء والمبيعات</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-partial">◐ Own+Team</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td></tr>
+        <tr><td>Projects — المشاريع</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-check">✦ CRUD</td><td class="role-partial">◐ View+Visit</td><td class="role-x">—</td><td class="role-x">—</td></tr>
+        <tr><td>Product Catalog — الكتالوج</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-partial">◐ View</td><td class="role-partial">◐ View</td><td class="role-partial">◐ View</td><td class="role-partial">◐ View</td></tr>
+        <tr><td>RFQ & Quotations — العروض</td><td class="role-check">✦ Full</td><td class="role-check">✦ Approve</td><td class="role-check">✦ CRUD</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-partial">◐ Submit/View</td></tr>
+        <tr><td>Inventory — المخزون</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-partial">◐ View</td><td class="role-x">—</td><td class="role-check">✦ CRUD</td><td class="role-x">—</td></tr>
+        <tr><td>Field Visits — الزيارات</td><td class="role-check">✦ Full</td><td class="role-check">✦ View All</td><td class="role-partial">◐ Own</td><td class="role-check">✦ Create</td><td class="role-x">—</td><td class="role-x">—</td></tr>
+        <tr><td>Chat — المحادثات</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-check">✦ Full</td><td class="role-x">—</td></tr>
+        <tr><td>HR — الموارد البشرية</td><td class="role-check">✦ Full</td><td class="role-partial">◐ View Team</td><td class="role-partial">◐ Own Profile</td><td class="role-partial">◐ Own Profile</td><td class="role-partial">◐ Own Profile</td><td class="role-x">—</td></tr>
+        <tr><td>System Settings — الإعدادات</td><td class="role-check">✦ Full</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td></tr>
+        <tr><td>Audit Logs — سجلات التدقيق</td><td class="role-check">✦ Full</td><td class="role-partial">◐ View</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td><td class="role-x">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:0.72rem;color:var(--text3);margin-top:0.75rem">✦ Full Access &nbsp;|&nbsp; ◐ Partial / Conditional Access &nbsp;|&nbsp; — No Access &nbsp;·&nbsp; Implemented via: Spatie Laravel-Permission + custom Policy classes</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 5. API STRUCTURE ═══════════════════ -->
+<section id="api" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الخامس / Section 05</div>
+    <h2 class="section-title">هيكل الـ API — REST API Structure</h2>
+    <p class="section-sub">Base URL: <span class="en" style="color:var(--cyan);font-size:0.85rem">https://api.alwaab.ae/api/v1/</span> — Laravel Sanctum Authentication</p>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="api-group">
+        <div class="api-group-title">🔐 Authentication</div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/auth/login</span><span class="api-desc">تسجيل الدخول</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/auth/logout</span><span class="api-desc">تسجيل الخروج</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/auth/refresh</span><span class="api-desc">تجديد التوكن</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/auth/me</span><span class="api-desc">بيانات المستخدم الحالي</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">👥 CRM — Contacts & Leads</div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/contacts</span><span class="api-desc">قائمة جهات الاتصال</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/contacts</span><span class="api-desc">إضافة جديد</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/contacts/{id}</span><span class="api-desc">تفاصيل + Timeline</span></div>
+        <div class="api-item"><span class="method put">PUT</span><span class="api-path">/contacts/{id}</span><span class="api-desc">تحديث</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/leads</span><span class="api-desc">Pipeline الفرص</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/leads/{id}/stage</span><span class="api-desc">تغيير مرحلة الفرصة</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">🏗️ Projects</div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/projects</span><span class="api-desc">قائمة المشاريع</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/projects</span><span class="api-desc">مشروع جديد</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/projects/map</span><span class="api-desc">بيانات الخريطة (GeoJSON)</span></div>
+        <div class="api-item"><span class="method put">PUT</span><span class="api-path">/projects/{id}/status</span><span class="api-desc">تحديث الحالة</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">📦 Products & Inventory</div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/products</span><span class="api-desc">كتالوج المنتجات</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/products/{id}/specs</span><span class="api-desc">المواصفات الفنية</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/inventory/stock</span><span class="api-desc">مستويات المخزون</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/inventory/movements</span><span class="api-desc">حركة مخزون</span></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="api-group">
+        <div class="api-group-title">📝 RFQ & Quotations</div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/rfq</span><span class="api-desc">إرسال طلب عرض سعر</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/rfq/{id}/boq</span><span class="api-desc">رفع BOQ (Excel/PDF)</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/quotations</span><span class="api-desc">إنشاء عرض سعر</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/quotations/{id}/approve</span><span class="api-desc">الموافقة على العرض</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/quotations/{id}/version</span><span class="api-desc">نسخة جديدة</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/quotations/{id}/pdf</span><span class="api-desc">تحميل PDF</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">📍 Field Visits</div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/visits</span><span class="api-desc">بدء زيارة ميدانية</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/visits/{id}/photos</span><span class="api-desc">رفع صورة مع GPS</span></div>
+        <div class="api-item"><span class="method put">PUT</span><span class="api-path">/visits/{id}/complete</span><span class="api-desc">إنهاء الزيارة</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/visits/history</span><span class="api-desc">سجل الزيارات</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/visits/map</span><span class="api-desc">خريطة الزيارات (Management)</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">💬 Chat (Real-time)</div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/conversations</span><span class="api-desc">قائمة المحادثات</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/conversations</span><span class="api-desc">محادثة جديدة</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/conversations/{id}/messages</span><span class="api-desc">رسائل المحادثة</span></div>
+        <div class="api-item"><span class="method post">POST</span><span class="api-path">/messages</span><span class="api-desc">إرسال رسالة (+ Reverb Event)</span></div>
+      </div>
+
+      <div class="api-group">
+        <div class="api-group-title">📊 Reports & Dashboard</div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/dashboard/kpis</span><span class="api-desc">مؤشرات الأداء الرئيسية</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/reports/sales</span><span class="api-desc">تقرير المبيعات</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/reports/projects</span><span class="api-desc">تقرير المشاريع</span></div>
+        <div class="api-item"><span class="method get">GET</span><span class="api-path">/reports/inventory</span><span class="api-desc">تقرير المخزون</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Response format -->
+  <div class="card" style="margin-top:1.5rem">
+    <div class="card-title">📋 Standard API Response Format</div>
+    <pre style="background:var(--bg3);border-radius:8px;padding:1rem;font-size:0.75rem;color:var(--text2);overflow-x:auto;direction:ltr;text-align:left"><code>{
+  "success": true,
+  "data": { ... },
+  "meta": {
+    "page": 1,
+    "per_page": 25,
+    "total": 150,
+    "locale": "ar"
+  },
+  "message": "تم بنجاح"
+}
+
+// Error Response:
+{
+  "success": false,
+  "error": { "code": "VALIDATION_ERROR", "message": "...", "fields": { ... } }
+}</code></pre>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 6. FIELD VISIT SYSTEM ═══════════════════ -->
+<section id="field-visit" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم السادس / Section 06</div>
+    <h2 class="section-title">نظام الزيارات الميدانية — Field Visit System</h2>
+    <p class="section-sub">GPS + صور بعلامة مائية + توثيق كامل — Flutter Mobile + Laravel Backend</p>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <h3 style="font-size:0.85rem;font-weight:700;color:var(--gold);margin-bottom:1rem">📱 تدفق الزيارة الميدانية — Visit Flow</h3>
+
+      <div class="flow-step">
+        <div class="flow-num">1</div>
+        <div class="flow-content">
+          <div class="title">بدء الزيارة — Start Visit</div>
+          <div class="desc">Flutter يلتقط GPS تلقائياً، يربط بالمشروع، يسجل وقت البدء وبيانات الموظف.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">2</div>
+        <div class="flow-content">
+          <div class="title">التصوير — Photo Capture</div>
+          <div class="desc">Camera API في Flutter تلتقط الصورة. يُضاف GPS الدقيق + Timestamp لـ EXIF metadata.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">3</div>
+        <div class="flow-content">
+          <div class="title">العلامة المائية — Watermark Overlay</div>
+          <div class="desc">على السيرفر (Laravel + Intervention Image): تُضاف العلامة المائية تشمل الاسم + التاريخ والوقت + إحداثيات GPS.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">4</div>
+        <div class="flow-content">
+          <div class="title">الرفع والتخزين — Upload to S3</div>
+          <div class="desc">الصورة الأصلية والمعلَّمة تُخزن في AWS S3. البيانات في PostgreSQL (visit_photos table).</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">5</div>
+        <div class="flow-content">
+          <div class="title">إنهاء الزيارة + التقرير — Complete Visit</div>
+          <div class="desc">الموظف يضيف ملاحظات ويُنهي الزيارة. يُرسل إشعار للمدير فوراً عبر Reverb.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">6</div>
+        <div class="flow-content">
+          <div class="title">عرض على الخريطة — Map View</div>
+          <div class="desc">الإدارة ترى جميع الزيارات على Google Maps مع Markers لكل موقع وفلترة حسب الموظف أو المشروع.</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:0.85rem;font-weight:700;color:var(--cyan);margin-bottom:1rem">🖼️ محتوى العلامة المائية — Watermark Content</h3>
+      <div style="background:var(--bg3);border:2px dashed var(--border2);border-radius:12px;overflow:hidden;margin-bottom:1.25rem">
+        <!-- Simulated watermarked photo mockup -->
+        <div style="background:linear-gradient(135deg,#1a2a40,#0d1a2a);height:200px;display:flex;align-items:center;justify-content:center;position:relative">
+          <div style="opacity:0.3;font-size:3rem">🏗️</div>
+          <!-- Watermark overlay simulation -->
+          <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.75);padding:8px 10px;font-size:0.65rem;direction:ltr">
+            <div style="color:var(--cyan);font-weight:700;margin-bottom:3px">ALWAAB — الوعاب للتوريدات</div>
+            <div style="color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:2px">
+              <span>👤 Ahmed Al Mansoori</span>
+              <span>📅 06 Jun 2026 — 14:32:17 GST</span>
+              <span>📍 25.2048° N, 55.2708° E</span>
+              <span>🏗️ Dubai Marina Tower B</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:10px 12px;font-size:0.72rem;color:var(--text2)">محاكاة للصورة بعد إضافة العلامة المائية — Watermark simulation</div>
+      </div>
+
+      <h3 style="font-size:0.85rem;font-weight:700;color:var(--gold);margin-bottom:0.75rem">⚙️ التقنية المستخدمة</h3>
+      <div class="card">
+        <ul style="list-style:none;font-size:0.78rem;color:var(--text2);display:flex;flex-direction:column;gap:8px">
+          <li>› <strong style="color:var(--text)">Flutter:</strong> geolocator + image_picker + camera packages</li>
+          <li>› <strong style="color:var(--text)">Backend:</strong> Intervention Image (PHP) for watermark rendering</li>
+          <li>› <strong style="color:var(--text)">Storage:</strong> AWS S3 — original + watermarked versions</li>
+          <li>› <strong style="color:var(--text)">Maps:</strong> Google Maps Flutter SDK + google_maps_flutter</li>
+          <li>› <strong style="color:var(--text)">Offline:</strong> Flutter queue visits when offline, sync on reconnect</li>
+          <li>› <strong style="color:var(--text)">Font:</strong> Cairo font embedded in watermark for Arabic text</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 7. UI WIREFRAMES ═══════════════════ -->
+<section id="ui" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم السابع / Section 07</div>
+    <h2 class="section-title">نماذج الواجهة — UI Wireframes</h2>
+    <p class="section-sub">Vue 3 + Tailwind CSS + Inertia.js — RTL Arabic Interface</p>
+  </div>
+
+  <!-- Dashboard Mockup -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:0.8rem;color:var(--text2);margin-bottom:0.75rem">📊 لوحة التحكم الرئيسية — Main Dashboard (Desktop)</p>
+    <div class="mockup">
+      <div class="mockup-bar">
+        <div class="mockup-dot" style="background:#ef4444"></div>
+        <div class="mockup-dot" style="background:#f59e0b"></div>
+        <div class="mockup-dot" style="background:#22c55e"></div>
+        <div style="flex:1;background:#374151;height:20px;border-radius:4px;margin:0 8px"></div>
+        <span style="font-size:0.6rem;color:#6b7280;direction:ltr">alwaab.ae/dashboard</span>
+      </div>
+      <div class="mockup-inner">
+        <!-- Sidebar -->
+        <div class="mockup-sidebar">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06)">
+            <div style="width:28px;height:28px;background:rgba(0,212,255,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:var(--cyan)">AW</div>
+            <div style="font-size:0.72rem;font-weight:700;color:#e2e8f0">الوعاب</div>
+          </div>
+          <div class="mockup-sidebar-item active">📊 لوحة التحكم</div>
+          <div class="mockup-sidebar-item">👥 العملاء (CRM)</div>
+          <div class="mockup-sidebar-item">🏗️ المشاريع</div>
+          <div class="mockup-sidebar-item">📦 الكتالوج</div>
+          <div class="mockup-sidebar-item">📝 العروض</div>
+          <div class="mockup-sidebar-item">🏭 المخزون</div>
+          <div class="mockup-sidebar-item">📍 الزيارات</div>
+          <div class="mockup-sidebar-item">💬 المحادثات</div>
+          <div class="mockup-sidebar-item">👨‍💼 الموارد البشرية</div>
+        </div>
+        <!-- Main content -->
+        <div class="mockup-main">
+          <div style="font-size:0.78rem;font-weight:700;color:#e2e8f0;margin-bottom:10px">لوحة التحكم — مرحباً، أحمد 👋</div>
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">المبيعات (YTD)</div>
+              <div class="kpi-value">2.4M</div>
+              <div class="kpi-change">↑ 18.5% AED</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">المشاريع النشطة</div>
+              <div class="kpi-value">47</div>
+              <div class="kpi-change">↑ 3 هذا الشهر</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">العملاء المحتملون</div>
+              <div class="kpi-value">23</div>
+              <div class="kpi-change" style="color:#f59e0b">⚡ 5 يحتاج متابعة</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">قيمة العروض</div>
+              <div class="kpi-value">890K</div>
+              <div class="kpi-change">↑ 12.3% AED</div>
+            </div>
+          </div>
+          <!-- Chart placeholder -->
+          <div style="background:#1f2937;border-radius:8px;height:110px;display:flex;align-items:flex-end;justify-content:space-around;padding:12px;gap:6px;border:1px solid rgba(255,255,255,0.06)">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+              <div style="width:18px;background:rgba(0,212,255,0.6);border-radius:2px 2px 0 0" data-h="60" style="height:60px"></div><span style="font-size:0.5rem;color:#64748b">يناير</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:18px;height:45px;background:rgba(0,212,255,0.5);border-radius:2px 2px 0 0"></div><span style="font-size:0.5rem;color:#64748b">فبراير</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:18px;height:70px;background:rgba(0,212,255,0.7);border-radius:2px 2px 0 0"></div><span style="font-size:0.5rem;color:#64748b">مارس</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:18px;height:55px;background:rgba(0,212,255,0.5);border-radius:2px 2px 0 0"></div><span style="font-size:0.5rem;color:#64748b">أبريل</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:18px;height:80px;background:var(--cyan);border-radius:2px 2px 0 0"></div><span style="font-size:0.5rem;color:#64748b">مايو</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px"><div style="width:18px;height:65px;background:rgba(0,212,255,0.6);border-radius:2px 2px 0 0"></div><span style="font-size:0.5rem;color:#64748b">يونيو</span></div>
+            <div style="font-size:0.55rem;color:#94a3b8;text-align:right;position:absolute;margin-right:4px">المبيعات الشهرية AED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Design System tokens -->
+  <div class="card">
+    <div class="card-title">🎨 Design Tokens — نظام التصميم</div>
+    <div class="grid-4" style="margin-top:0.5rem">
+      <div>
+        <p style="font-size:0.68rem;color:var(--text3);margin-bottom:6px">COLORS</p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:16px;height:16px;border-radius:4px;background:#0a0f1e"></div><span style="font-size:0.68rem;color:var(--text2)">bg-primary</span></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:16px;height:16px;border-radius:4px;background:#00d4ff"></div><span style="font-size:0.68rem;color:var(--text2)">accent-cyan</span></div>
+          <div style="display:flex;align-items:center;gap:8px"><div style="width:16px;height:16px;border-radius:4px;background:#f6ad55"></div><span style="font-size:0.68rem;color:var(--text2)">accent-gold</span></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;color:var(--text3);margin-bottom:6px">FONTS</p>
+        <div style="font-size:0.75rem;color:var(--text2);display:flex;flex-direction:column;gap:4px">
+          <span style="font-family:'Cairo'">Cairo — العربية</span>
+          <span style="font-family:'Cairo';font-size:0.7rem;color:var(--text3)">400 / 500 / 700 / 900</span>
+          <span style="font-family:'Cairo';direction:ltr;font-size:0.7rem">Tajawal (alt AR)</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;color:var(--text3);margin-bottom:6px">SPACING</p>
+        <div style="font-size:0.72rem;color:var(--text2);display:flex;flex-direction:column;gap:4px">
+          <span>Base: 4px grid</span>
+          <span>Sidebar: 240px</span>
+          <span>Card radius: 12px</span>
+          <span>Shadow: none (flat)</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;color:var(--text3);margin-bottom:6px">LAYOUT</p>
+        <div style="font-size:0.72rem;color:var(--text2);display:flex;flex-direction:column;gap:4px">
+          <span>Direction: RTL default</span>
+          <span>Max width: 1400px</span>
+          <span>Mobile: 768px break</span>
+          <span>Tailwind v4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 8. MODULE STRUCTURE ═══════════════════ -->
+<section class="section">
+  <div class="section-header">
+    <div class="section-num">القسم الثامن / Section 08</div>
+    <h2 class="section-title">هيكل المشروع — Laravel Project Structure</h2>
+    <p class="section-sub">Clean Architecture — Domain-Driven Design في Laravel 12</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">📂 Backend — Laravel Directory Structure</div>
+      <pre style="font-size:0.68rem;color:var(--text2);line-height:1.7;direction:ltr;overflow-x:auto"><code>app/
+├── Http/
+│   ├── Controllers/Api/V1/
+│   │   ├── Auth/
+│   │   ├── CRM/
+│   │   ├── Projects/
+│   │   ├── Inventory/
+│   │   ├── FieldVisit/
+│   │   └── ...
+│   ├── Requests/ (Form Validation)
+│   └── Resources/ (API Transformers)
+├── Domain/
+│   ├── CRM/
+│   │   ├── Models/ (Contact, Lead, Activity)
+│   │   ├── Services/ (LeadService, etc.)
+│   │   ├── Repositories/
+│   │   └── Events/
+│   ├── Projects/ ...
+│   ├── Inventory/ ...
+│   └── FieldVisit/ ...
+├── Services/
+│   ├── WatermarkService.php
+│   ├── GeoService.php
+│   ├── PdfService.php
+│   └── NotificationService.php
+└── Events/ &amp; Listeners/</code></pre>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📂 Frontend — Vue 3 + Inertia Structure</div>
+      <pre style="font-size:0.68rem;color:var(--text2);line-height:1.7;direction:ltr;overflow-x:auto"><code>resources/js/
+├── Pages/
+│   ├── Dashboard/
+│   ├── CRM/ (Contacts, Leads)
+│   ├── Projects/
+│   ├── Catalog/
+│   ├── Quotations/
+│   ├── Inventory/
+│   ├── FieldVisits/
+│   ├── Chat/
+│   └── HR/
+├── Components/
+│   ├── UI/ (Button, Modal, Table...)
+│   ├── Charts/ (Chart.js wrappers)
+│   ├── Maps/ (Google Maps)
+│   └── Forms/
+├── Composables/
+│   ├── useReverb.js (WebSocket)
+│   ├── useI18n.js (AR/EN)
+│   └── usePermissions.js
+└── Stores/ (Pinia)</code></pre>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.25rem">
+    <div class="card-title">📂 Flutter Mobile App Structure</div>
+    <pre style="font-size:0.68rem;color:var(--text2);line-height:1.7;direction:ltr;overflow-x:auto"><code>lib/
+├── features/
+│   ├── auth/          ├── dashboard/    ├── crm/
+│   ├── projects/      ├── field_visit/  ├── inventory/
+│   ├── chat/          └── catalog/
+├── core/
+│   ├── api/           # Dio HTTP client + interceptors
+│   ├── auth/          # Secure token storage (flutter_secure_storage)
+│   ├── gps/           # Geolocator service
+│   ├── camera/        # Photo capture + EXIF
+│   └── offline/       # Queue manager for offline visits
+└── shared/
+    ├── widgets/       # Shared UI components (RTL-aware)
+    └── l10n/          # ar.arb + en.arb (Flutter i18n)</code></pre>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 9. SECURITY ═══════════════════ -->
+<section id="security" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم التاسع / Section 09</div>
+    <h2 class="section-title">الأمان والحماية — Security Best Practices</h2>
+    <p class="section-sub">معايير أمان المؤسسات — Enterprise-grade security implementation</p>
+  </div>
+
+  <div class="grid-2">
+    <div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(252,129,129,0.1)">🔐</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Authentication — المصادقة</div>
+          <div style="font-size:0.75rem;color:var(--text2)">Laravel Sanctum SPA tokens. Bcrypt password hashing. Rate limiting on /auth/login (5 attempts/minute). 2FA optional (TOTP).</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(0,212,255,0.1)">🛡️</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Authorization — التفويض</div>
+          <div style="font-size:0.75rem;color:var(--text2)">Spatie RBAC. Laravel Policies per model. Gate checks on every sensitive action. Middleware groups per role.</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(246,173,85,0.1)">📋</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Audit & Activity Logs</div>
+          <div style="font-size:0.75rem;color:var(--text2)">Spatie Activity Log tracks all model changes. Log includes: user, IP, action, before/after values, timestamp. Immutable logs stored in separate DB table.</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(72,187,120,0.1)">🔑</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Data Security — أمان البيانات</div>
+          <div style="font-size:0.75rem;color:var(--text2)">All sensitive fields encrypted at rest. S3 files served via signed URLs (1-hour expiry). Database backups encrypted (AES-256).</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(159,122,234,0.1)">🌐</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">API Security</div>
+          <div style="font-size:0.75rem;color:var(--text2)">HTTPS only. CORS whitelist. API versioning (/v1/). Request signing for mobile. SQL injection prevention via Eloquent. XSS protection headers.</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(251,146,60,0.1)">📱</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Mobile Security — Flutter</div>
+          <div style="font-size:0.75rem;color:var(--text2)">flutter_secure_storage for tokens. Certificate pinning. No sensitive data in local storage. Biometric auth option. Root/jailbreak detection.</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(56,189,248,0.1)">☁️</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">Infrastructure Security</div>
+          <div style="font-size:0.75rem;color:var(--text2)">Cloudflare WAF + DDoS protection. Private VPC for DB servers. Redis AUTH password. Environment secrets in .env (never committed). Docker secrets in production.</div>
+        </div>
+      </div>
+      <div class="security-item">
+        <div class="security-icon" style="background:rgba(72,187,120,0.1)">🇦🇪</div>
+        <div>
+          <div style="font-size:0.82rem;font-weight:700;margin-bottom:3px">UAE Compliance — الامتثال</div>
+          <div style="font-size:0.75rem;color:var(--text2)">Data residency in UAE region. TDRA compliance for data protection. Privacy policy in Arabic & English. GDPR-compatible data export/delete.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══════════════════ 10. ROADMAP ═══════════════════ -->
+<section id="roadmap" class="section">
+  <div class="section-header">
+    <div class="section-num">القسم العاشر / Section 10</div>
+    <h2 class="section-title">خارطة التطوير — Development Roadmap</h2>
+    <p class="section-sub">18 شهراً من التطوير المرحلي — 18-month phased development plan</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="timeline">
+
+      <div class="timeline-item phase-1">
+        <div class="timeline-phase">المرحلة الأولى — Phase 1 (شهر 1-3)</div>
+        <div class="timeline-title">Foundation & Core Setup — الأساسيات</div>
+        <div class="timeline-desc">إعداد البنية التحتية وقاعدة البيانات والنظام الأساسي</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">Laravel 12 Setup</span>
+          <span class="timeline-task">PostgreSQL Schema</span>
+          <span class="timeline-task">Auth + RBAC</span>
+          <span class="timeline-task">Vue 3 + Inertia</span>
+          <span class="timeline-task">Bilingual AR/EN</span>
+          <span class="timeline-task">AWS S3</span>
+          <span class="timeline-task">Dashboard KPIs</span>
+        </div>
+      </div>
+
+      <div class="timeline-item phase-1">
+        <div class="timeline-phase">المرحلة الثانية — Phase 2 (شهر 3-6)</div>
+        <div class="timeline-title">CRM + Projects + Catalog</div>
+        <div class="timeline-desc">وحدات العملاء والمشاريع وكتالوج المنتجات</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">CRM Full Module</span>
+          <span class="timeline-task">Lead Pipeline</span>
+          <span class="timeline-task">Projects DB</span>
+          <span class="timeline-task">Google Maps</span>
+          <span class="timeline-task">Product Catalog</span>
+          <span class="timeline-task">Document Upload</span>
+        </div>
+      </div>
+
+      <div class="timeline-item phase-2">
+        <div class="timeline-phase">المرحلة الثالثة — Phase 3 (شهر 6-9)</div>
+        <div class="timeline-title">RFQ + Inventory + Field Visits</div>
+        <div class="timeline-desc">نظام العروض والمخزون والزيارات الميدانية</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">RFQ System</span>
+          <span class="timeline-task">BOQ Parser</span>
+          <span class="timeline-task">Quote Generator</span>
+          <span class="timeline-task">Multi-Warehouse</span>
+          <span class="timeline-task">Stock Management</span>
+          <span class="timeline-task">Field Visit GPS</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item phase-2">
+        <div class="timeline-phase">المرحلة الرابعة — Phase 4 (شهر 9-12)</div>
+        <div class="timeline-title">Flutter Mobile App — التطبيق المحمول</div>
+        <div class="timeline-desc">تطبيق Android وiOS مع GPS والكاميرا</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">Flutter Auth</span>
+          <span class="timeline-task">Dashboard Mobile</span>
+          <span class="timeline-task">Visit GPS+Photo</span>
+          <span class="timeline-task">Watermark Engine</span>
+          <span class="timeline-task">Offline Support</span>
+          <span class="timeline-task">Push Notifications</span>
+        </div>
+      </div>
+
+      <div class="timeline-item phase-3">
+        <div class="timeline-phase">المرحلة الخامسة — Phase 5 (شهر 12-15)</div>
+        <div class="timeline-title">Chat + HR + Customer Portal</div>
+        <div class="timeline-desc">التواصل الداخلي والموارد البشرية وبوابة العملاء</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">Laravel Reverb</span>
+          <span class="timeline-task">Real-time Chat</span>
+          <span class="timeline-task">HR Module</span>
+          <span class="timeline-task">Attendance GPS</span>
+          <span class="timeline-task">Customer Portal</span>
+          <span class="timeline-task">Support Tickets</span>
+        </div>
+      </div>
+
+      <div class="timeline-item phase-4">
+        <div class="timeline-phase">المرحلة السادسة — Phase 6 (شهر 15-18)</div>
+        <div class="timeline-title">Reporting + Optimization + Launch</div>
+        <div class="timeline-desc">التقارير المتقدمة والتحسين والإطلاق النهائي</div>
+        <div class="timeline-tasks">
+          <span class="timeline-task">Advanced Reports</span>
+          <span class="timeline-task">Audit Logs UI</span>
+          <span class="timeline-task">Performance Tuning</span>
+          <span class="timeline-task">Horizon Monitoring</span>
+          <span class="timeline-task">UAT Testing</span>
+          <span class="timeline-task">Production Launch</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tech stack summary -->
+  <div style="margin-top:2.5rem;background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:1.75rem">
+    <h3 style="font-size:0.9rem;font-weight:700;margin-bottom:1.25rem;color:var(--cyan)">📦 ملخص التقنيات المستخدمة — Full Technology Stack</h3>
+    <div class="grid-4">
+      <div>
+        <p style="font-size:0.68rem;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Backend</p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span class="badge badge-cyan">Laravel 12</span>
+          <span class="badge badge-cyan">PHP 8.4</span>
+          <span class="badge badge-cyan">PostgreSQL 16</span>
+          <span class="badge badge-cyan">Redis 7</span>
+          <span class="badge badge-cyan">Reverb + Horizon</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Frontend</p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span class="badge badge-gold">Vue 3</span>
+          <span class="badge badge-gold">Inertia.js</span>
+          <span class="badge badge-gold">Tailwind CSS v4</span>
+          <span class="badge badge-gold">Pinia</span>
+          <span class="badge badge-gold">Vue i18n</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Mobile</p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span class="badge badge-purple">Flutter 3.x</span>
+          <span class="badge badge-purple">Dart 3</span>
+          <span class="badge badge-purple">Dio HTTP</span>
+          <span class="badge badge-purple">Riverpod</span>
+          <span class="badge badge-purple">FCM + APNs</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:0.68rem;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px">Infrastructure</p>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span class="badge badge-green">AWS S3</span>
+          <span class="badge badge-green">Google Maps API</span>
+          <span class="badge badge-green">Cloudflare</span>
+          <span class="badge badge-green">Docker</span>
+          <span class="badge badge-green">Nginx</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="margin-bottom:0.5rem">
+    <strong>ALWAAB ERP + CRM — System Architecture v1.0</strong>
+  </div>
+  <div style="margin-bottom:0.25rem">
+    Designed for <strong>Al Waab Building Materials</strong> — <span class="en">alwaab.ae</span> — FlowGuard CPVC Systems, UAE
+  </div>
+  <div>Architected by <strong>Tacete Information Technology</strong> — <span class="en">tacete.ae | info@tacete.ae | +971 55 606 0270</span></div>
+  <div style="margin-top:0.75rem;color:var(--text3);font-size:0.68rem">Laravel 12 · PHP 8.4 · PostgreSQL · Redis · Vue 3 · Inertia.js · Flutter · AWS S3 · Google Maps · Laravel Reverb · Laravel Horizon</div>
+</footer>
+
+</body>
+</html>

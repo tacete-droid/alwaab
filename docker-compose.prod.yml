@@ -1,0 +1,110 @@
+services:
+  app:
+    build:
+      context: ./alwaab-erp
+      dockerfile: Dockerfile
+    container_name: alwaab-app
+    restart: unless-stopped
+    working_dir: /var/www
+    env_file:
+      - ./alwaab-erp/.env
+    volumes:
+      - ./alwaab-erp:/var/www
+      - erp_storage:/var/www/storage/app
+    networks:
+      - alwaab
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_started
+
+  nginx:
+    image: nginx:alpine
+    container_name: alwaab-nginx
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT:-80}:80"
+    volumes:
+      - ./alwaab-erp:/var/www/erp
+      - ./alwaab-website:/var/www/website:ro
+      - ./docker/nginx/production.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - alwaab
+    depends_on:
+      - app
+    environment:
+      ERP_DOMAIN: ${ERP_DOMAIN:-erp.localhost}
+      WEBSITE_DOMAIN: ${WEBSITE_DOMAIN:-localhost}
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: alwaab-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-alwaab}
+      POSTGRES_USER: ${DB_USERNAME:-alwaab}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - alwaab
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USERNAME:-alwaab}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: alwaab-redis
+    restart: unless-stopped
+    networks:
+      - alwaab
+
+  queue:
+    build:
+      context: ./alwaab-erp
+      dockerfile: Dockerfile
+    container_name: alwaab-queue
+    restart: unless-stopped
+    working_dir: /var/www
+    command: php artisan queue:work redis --sleep=3 --tries=2 --timeout=900
+    env_file:
+      - ./alwaab-erp/.env
+    volumes:
+      - ./alwaab-erp:/var/www
+      - erp_storage:/var/www/storage/app
+    networks:
+      - alwaab
+    depends_on:
+      - app
+      - redis
+
+  reverb:
+    build:
+      context: ./alwaab-erp
+      dockerfile: Dockerfile
+    container_name: alwaab-reverb
+    restart: unless-stopped
+    working_dir: /var/www
+    command: php artisan reverb:start --host=0.0.0.0 --port=8081
+    env_file:
+      - ./alwaab-erp/.env
+    volumes:
+      - ./alwaab-erp:/var/www
+    ports:
+      - "8081:8081"
+    networks:
+      - alwaab
+    depends_on:
+      - app
+      - redis
+
+networks:
+  alwaab:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  erp_storage:

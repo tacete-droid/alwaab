@@ -1,0 +1,3902 @@
+[
+  {
+    "sku": "FG-0001",
+    "source_sno": 1,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 16mm x 1.50mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 16mm x 1.50mm x 4.00Mtr PN20",
+    "size": "16mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 8.14,
+    "price_with_markup_aed": 8.3,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0002",
+    "source_sno": 2,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 20mm x 1.50mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 20mm x 1.50mm x 4.00Mtr PN16",
+    "size": "20mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 10.6,
+    "price_with_markup_aed": 10.81,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0003",
+    "source_sno": 3,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 25mm x 1.90mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 25mm x 1.90mm x 4.00Mtr PN16",
+    "size": "25mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 15.5,
+    "price_with_markup_aed": 15.81,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0004",
+    "source_sno": 4,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 32mm x 2.40mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 32mm x 2.40mm x 4.00Mtr PN16",
+    "size": "32mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 24.0,
+    "price_with_markup_aed": 24.48,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0005",
+    "source_sno": 5,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 40mm x 3.00mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 40mm x 3.00mm x 4.00Mtr PN16",
+    "size": "40mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 37.0,
+    "price_with_markup_aed": 37.74,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0006",
+    "source_sno": 6,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 50mm x 3.70mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 50mm x 3.70mm x 4.00Mtr PN16",
+    "size": "50mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 56.0,
+    "price_with_markup_aed": 57.12,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0007",
+    "source_sno": 7,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 63mm x 4.70mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 63mm x 4.70mm x 4.00Mtr PN16",
+    "size": "63mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 91.0,
+    "price_with_markup_aed": 92.82,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0008",
+    "source_sno": 8,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 75mm x 5.60mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 75mm x 5.60mm x 4.00Mtr PN16",
+    "size": "75mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 126.0,
+    "price_with_markup_aed": 128.52,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0009",
+    "source_sno": 9,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 90mm x 6.70mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 90mm x 6.70mm x 4.00Mtr PN16",
+    "size": "90mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 179.0,
+    "price_with_markup_aed": 182.58,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0010",
+    "source_sno": 10,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 110mm x 8.10mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 110mm x 8.10mm x 4.00Mtr PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 261.0,
+    "price_with_markup_aed": 266.22,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0011",
+    "source_sno": 11,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 160mm x 11.80mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 160mm x 11.80mm x 4.00Mtr PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 566.0,
+    "price_with_markup_aed": 577.32,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0012",
+    "source_sno": 12,
+    "section": "Cold Water",
+    "section_slug": "cold-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 225mm x 16.50mm x 4.00Mtr PN16",
+    "name_ar": "CPVC Pipe 225mm x 16.50mm x 4.00Mtr PN16",
+    "size": "225mm",
+    "pressure_rating": "PN16",
+    "unit": "Lengths",
+    "price_aed": 2000.0,
+    "price_with_markup_aed": 2040.0,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0013",
+    "source_sno": 13,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 16mm x 1.50mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 16mm x 1.50mm x 4.00Mtr PN20",
+    "size": "16mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 8.14,
+    "price_with_markup_aed": 8.3,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0014",
+    "source_sno": 14,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 20mm x 1.90mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 20mm x 1.90mm x 4.00Mtr PN20",
+    "size": "20mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 12.0,
+    "price_with_markup_aed": 12.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0015",
+    "source_sno": 15,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 25mm x 2.30mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 25mm x 2.30mm x 4.00Mtr PN20",
+    "size": "25mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 18.0,
+    "price_with_markup_aed": 18.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0016",
+    "source_sno": 16,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 32mm x 2.90mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 32mm x 2.90mm x 4.00Mtr PN20",
+    "size": "32mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 28.5,
+    "price_with_markup_aed": 29.07,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0017",
+    "source_sno": 17,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 40mm x 3.70mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 40mm x 3.70mm x 4.00Mtr PN20",
+    "size": "40mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 45.0,
+    "price_with_markup_aed": 45.9,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0018",
+    "source_sno": 18,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 50mm x 4.60mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 50mm x 4.60mm x 4.00Mtr PN20",
+    "size": "50mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 69.0,
+    "price_with_markup_aed": 70.38,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0019",
+    "source_sno": 19,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 63mm x 5.80mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 63mm x 5.80mm x 4.00Mtr PN20",
+    "size": "63mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 108.0,
+    "price_with_markup_aed": 110.16,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0020",
+    "source_sno": 20,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 75mm x 6.80mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 75mm x 6.80mm x 4.00Mtr PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 149.0,
+    "price_with_markup_aed": 151.98,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0021",
+    "source_sno": 21,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 90mm x 8.20mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 90mm x 8.20mm x 4.00Mtr PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 220.0,
+    "price_with_markup_aed": 224.4,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0022",
+    "source_sno": 22,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 110mm x 10.00mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 110mm x 10.00mm x 4.00Mtr PN20",
+    "size": "110mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 326.0,
+    "price_with_markup_aed": 332.52,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0023",
+    "source_sno": 23,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 160mm x 14.60mm x 4.00Mtr PN20",
+    "name_ar": "CPVC Pipe 160mm x 14.60mm x 4.00Mtr PN20",
+    "size": "160mm",
+    "pressure_rating": "PN20",
+    "unit": "Lengths",
+    "price_aed": 684.0,
+    "price_with_markup_aed": 697.68,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0024",
+    "source_sno": 24,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 16mm x 1.80mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 16mm x 1.80mm x 4.00Mtr PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 8.64,
+    "price_with_markup_aed": 8.81,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0025",
+    "source_sno": 25,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 20mm x 2.30mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 20mm x 2.30mm x 4.00Mtr PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 14.0,
+    "price_with_markup_aed": 14.28,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0026",
+    "source_sno": 26,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 25mm x 2.80mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 25mm x 2.80mm x 4.00Mtr PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 21.0,
+    "price_with_markup_aed": 21.42,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0027",
+    "source_sno": 27,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 32mm x 3.60mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 32mm x 3.60mm x 4.00Mtr PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 35.0,
+    "price_with_markup_aed": 35.7,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0028",
+    "source_sno": 28,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 40mm x 4.50mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 40mm x 4.50mm x 4.00Mtr PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 54.0,
+    "price_with_markup_aed": 55.08,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0029",
+    "source_sno": 29,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 50mm x 5.60mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 50mm x 5.60mm x 4.00Mtr PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 84.0,
+    "price_with_markup_aed": 85.68,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0030",
+    "source_sno": 30,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Pipe",
+    "type": "pipe",
+    "name_en": "CPVC Pipe 63mm x 7.10mm x 4.00Mtr PN25",
+    "name_ar": "CPVC Pipe 63mm x 7.10mm x 4.00Mtr PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Lengths",
+    "price_aed": 134.0,
+    "price_with_markup_aed": 136.68,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0031",
+    "source_sno": 31,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 16mm PN25",
+    "name_ar": "CPVC Coupler 16mm PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.3,
+    "price_with_markup_aed": 0.31,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0032",
+    "source_sno": 32,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 20mm PN25",
+    "name_ar": "CPVC Coupler 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.6,
+    "price_with_markup_aed": 0.61,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0033",
+    "source_sno": 33,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 25mm PN25",
+    "name_ar": "CPVC Coupler 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.9,
+    "price_with_markup_aed": 0.92,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0034",
+    "source_sno": 34,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 32mm PN25",
+    "name_ar": "CPVC Coupler 32mm PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.8,
+    "price_with_markup_aed": 1.84,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0035",
+    "source_sno": 35,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 40mm PN25",
+    "name_ar": "CPVC Coupler 40mm PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 3.2,
+    "price_with_markup_aed": 3.26,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0036",
+    "source_sno": 36,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 50mm PN25",
+    "name_ar": "CPVC Coupler 50mm PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 5.6,
+    "price_with_markup_aed": 5.71,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0037",
+    "source_sno": 37,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 63mm PN25",
+    "name_ar": "CPVC Coupler 63mm PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 10.5,
+    "price_with_markup_aed": 10.71,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0038",
+    "source_sno": 38,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 75mm PN20",
+    "name_ar": "CPVC Coupler 75mm PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 13.0,
+    "price_with_markup_aed": 13.26,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0039",
+    "source_sno": 39,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 90mm PN20",
+    "name_ar": "CPVC Coupler 90mm PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 18.0,
+    "price_with_markup_aed": 18.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0040",
+    "source_sno": 40,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 110mm PN16",
+    "name_ar": "CPVC Coupler 110mm PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 30.5,
+    "price_with_markup_aed": 31.11,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0041",
+    "source_sno": 41,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Coupler",
+    "type": "fitting",
+    "name_en": "CPVC Coupler 160mm PN16",
+    "name_ar": "CPVC Coupler 160mm PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 94.0,
+    "price_with_markup_aed": 95.88,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0042",
+    "source_sno": 42,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90⁰ 16mm PN25",
+    "name_ar": "CPVC Elbow 90⁰ 16mm PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.48,
+    "price_with_markup_aed": 0.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0043",
+    "source_sno": 43,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 20mm PN25",
+    "name_ar": "CPVC Elbow 90° 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.8,
+    "price_with_markup_aed": 0.82,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0044",
+    "source_sno": 44,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 25mm PN25",
+    "name_ar": "CPVC Elbow 90° 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.4,
+    "price_with_markup_aed": 1.43,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0045",
+    "source_sno": 45,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 32mm PN25",
+    "name_ar": "CPVC Elbow 90° 32mm PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.8,
+    "price_with_markup_aed": 2.86,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0046",
+    "source_sno": 46,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 40mm PN25",
+    "name_ar": "CPVC Elbow 90° 40mm PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 5.2,
+    "price_with_markup_aed": 5.3,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0047",
+    "source_sno": 47,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 50mm PN25",
+    "name_ar": "CPVC Elbow 90° 50mm PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 9.0,
+    "price_with_markup_aed": 9.18,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0048",
+    "source_sno": 48,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 63mm PN25",
+    "name_ar": "CPVC Elbow 90° 63mm PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 18.0,
+    "price_with_markup_aed": 18.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0049",
+    "source_sno": 49,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 75mm PN20",
+    "name_ar": "CPVC Elbow 90° 75mm PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 21.8,
+    "price_with_markup_aed": 22.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0050",
+    "source_sno": 50,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 90mm PN20",
+    "name_ar": "CPVC Elbow 90° 90mm PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 39.0,
+    "price_with_markup_aed": 39.78,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0051",
+    "source_sno": 51,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 110mm PN16",
+    "name_ar": "CPVC Elbow 90° 110mm PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 56.5,
+    "price_with_markup_aed": 57.63,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0052",
+    "source_sno": 52,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 90⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 90° 160mm PN16",
+    "name_ar": "CPVC Elbow 90° 160mm PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 133.5,
+    "price_with_markup_aed": 136.17,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0053",
+    "source_sno": 53,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45⁰ 16mm PN25",
+    "name_ar": "CPVC Elbow 45⁰ 16mm PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.4,
+    "price_with_markup_aed": 0.41,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0054",
+    "source_sno": 54,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 20mm PN25",
+    "name_ar": "CPVC Elbow 45° 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.7,
+    "price_with_markup_aed": 0.71,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0055",
+    "source_sno": 55,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 25mm PN25",
+    "name_ar": "CPVC Elbow 45° 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.2,
+    "price_with_markup_aed": 1.22,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0056",
+    "source_sno": 56,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 32mm PN25",
+    "name_ar": "CPVC Elbow 45° 32mm PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0057",
+    "source_sno": 57,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 40mm PN25",
+    "name_ar": "CPVC Elbow 45° 40mm PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 4.0,
+    "price_with_markup_aed": 4.08,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0058",
+    "source_sno": 58,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 50mm PN25",
+    "name_ar": "CPVC Elbow 45° 50mm PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 7.4,
+    "price_with_markup_aed": 7.55,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0059",
+    "source_sno": 59,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 63mm PN25",
+    "name_ar": "CPVC Elbow 45° 63mm PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 14.0,
+    "price_with_markup_aed": 14.28,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0060",
+    "source_sno": 60,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 75mm PN20",
+    "name_ar": "CPVC Elbow 45° 75mm PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 19.0,
+    "price_with_markup_aed": 19.38,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0061",
+    "source_sno": 61,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 90mm PN20",
+    "name_ar": "CPVC Elbow 45° 90mm PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 28.0,
+    "price_with_markup_aed": 28.56,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0062",
+    "source_sno": 62,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 110mm PN16",
+    "name_ar": "CPVC Elbow 45° 110mm PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 46.0,
+    "price_with_markup_aed": 46.92,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0063",
+    "source_sno": 63,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Elbow 45⁰",
+    "type": "fitting",
+    "name_en": "CPVC Elbow 45° 160mm PN16",
+    "name_ar": "CPVC Elbow 45° 160mm PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 102.0,
+    "price_with_markup_aed": 104.04,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0064",
+    "source_sno": 64,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 20mm PN25",
+    "name_ar": "CPVC Tee 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.0,
+    "price_with_markup_aed": 1.02,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0065",
+    "source_sno": 65,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 25mm PN25",
+    "name_ar": "CPVC Tee 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.0,
+    "price_with_markup_aed": 2.04,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0066",
+    "source_sno": 66,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 32mm PN25",
+    "name_ar": "CPVC Tee 32mm PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 3.6,
+    "price_with_markup_aed": 3.67,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0067",
+    "source_sno": 67,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 40mm PN25",
+    "name_ar": "CPVC Tee 40mm PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 7.0,
+    "price_with_markup_aed": 7.14,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0068",
+    "source_sno": 68,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 50mm PN25",
+    "name_ar": "CPVC Tee 50mm PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 12.0,
+    "price_with_markup_aed": 12.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0069",
+    "source_sno": 69,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 63mm PN25",
+    "name_ar": "CPVC Tee 63mm PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 22.5,
+    "price_with_markup_aed": 22.95,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0070",
+    "source_sno": 70,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 75mm PN20",
+    "name_ar": "CPVC Tee 75mm PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 30.0,
+    "price_with_markup_aed": 30.6,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0071",
+    "source_sno": 71,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 90mm PN20",
+    "name_ar": "CPVC Tee 90mm PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 43.5,
+    "price_with_markup_aed": 44.37,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0072",
+    "source_sno": 72,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 110mm PN16",
+    "name_ar": "CPVC Tee 110mm PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 73.5,
+    "price_with_markup_aed": 74.97,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0073",
+    "source_sno": 73,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Tee",
+    "type": "fitting",
+    "name_en": "CPVC Tee 160mm PN16",
+    "name_ar": "CPVC Tee 160mm PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 161.0,
+    "price_with_markup_aed": 164.22,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0074",
+    "source_sno": 74,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 25mm x 20mm",
+    "name_ar": "CPVC Reducer Bush 25mm x 20mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.25,
+    "price_with_markup_aed": 0.26,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0075",
+    "source_sno": 75,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 32mm x 25mm",
+    "name_ar": "CPVC Reducer Bush 32mm x 25mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.5,
+    "price_with_markup_aed": 0.51,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0076",
+    "source_sno": 76,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 32mm x 20mm",
+    "name_ar": "CPVC Reducer Bush 32mm x 20mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.65,
+    "price_with_markup_aed": 0.66,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0077",
+    "source_sno": 77,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 40mm x 32mm",
+    "name_ar": "CPVC Reducer Bush 40mm x 32mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.8,
+    "price_with_markup_aed": 0.82,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0078",
+    "source_sno": 78,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 40mm x 25mm",
+    "name_ar": "CPVC Reducer Bush 40mm x 25mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.2,
+    "price_with_markup_aed": 1.22,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0079",
+    "source_sno": 79,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 40mm x 20mm",
+    "name_ar": "CPVC Reducer Bush 40mm x 20mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.2,
+    "price_with_markup_aed": 1.22,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0080",
+    "source_sno": 80,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 50mm x40mm",
+    "name_ar": "CPVC Reducer Bush 50mm x40mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.4,
+    "price_with_markup_aed": 1.43,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0081",
+    "source_sno": 81,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 50mm x 32mm",
+    "name_ar": "CPVC Reducer Bush 50mm x 32mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0082",
+    "source_sno": 82,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 50mm x 25mm",
+    "name_ar": "CPVC Reducer Bush 50mm x 25mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0083",
+    "source_sno": 83,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 50mm x 20mm",
+    "name_ar": "CPVC Reducer Bush 50mm x 20mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0084",
+    "source_sno": 84,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 63mm x 50mm",
+    "name_ar": "CPVC Reducer Bush 63mm x 50mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.8,
+    "price_with_markup_aed": 2.86,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0085",
+    "source_sno": 85,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 75mm x 63mm",
+    "name_ar": "CPVC Reducer Bush 75mm x 63mm",
+    "size": "75mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 3.6,
+    "price_with_markup_aed": 3.67,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0086",
+    "source_sno": 86,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 63mm x 40mm",
+    "name_ar": "CPVC Reducer Bush 63mm x 40mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 4.4,
+    "price_with_markup_aed": 4.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0087",
+    "source_sno": 87,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 63mm x 32mm",
+    "name_ar": "CPVC Reducer Bush 63mm x 32mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 4.4,
+    "price_with_markup_aed": 4.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0088",
+    "source_sno": 88,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 63mm x 25mm",
+    "name_ar": "CPVC Reducer Bush 63mm x 25mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 4.4,
+    "price_with_markup_aed": 4.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0089",
+    "source_sno": 89,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 63mm x 20mm",
+    "name_ar": "CPVC Reducer Bush 63mm x 20mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 4.4,
+    "price_with_markup_aed": 4.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0090",
+    "source_sno": 90,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 90mm x 75mm",
+    "name_ar": "CPVC Reducer Bush 90mm x 75mm",
+    "size": "90mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.4,
+    "price_with_markup_aed": 6.53,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0091",
+    "source_sno": 91,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 75mm x 40mm",
+    "name_ar": "CPVC Reducer Bush 75mm x 40mm",
+    "size": "75mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.4,
+    "price_with_markup_aed": 6.53,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0092",
+    "source_sno": 92,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 90mm x 63mm",
+    "name_ar": "CPVC Reducer Bush 90mm x 63mm",
+    "size": "90mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.8,
+    "price_with_markup_aed": 7.96,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0093",
+    "source_sno": 93,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 110mm x 90mm",
+    "name_ar": "CPVC Reducer Bush 110mm x 90mm",
+    "size": "110mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 11.6,
+    "price_with_markup_aed": 11.83,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0094",
+    "source_sno": 94,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 110mm x 63mm",
+    "name_ar": "CPVC Reducer Bush 110mm x 63mm",
+    "size": "110mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 16.0,
+    "price_with_markup_aed": 16.32,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0095",
+    "source_sno": 95,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 110mm x 75mm",
+    "name_ar": "CPVC Reducer Bush 110mm x 75mm",
+    "size": "110mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 17.7,
+    "price_with_markup_aed": 18.05,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0096",
+    "source_sno": 96,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 160mm x 110mm",
+    "name_ar": "CPVC Reducer Bush 160mm x 110mm",
+    "size": "160mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 46.4,
+    "price_with_markup_aed": 47.33,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0097",
+    "source_sno": 97,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 160mm x 75mm",
+    "name_ar": "CPVC Reducer Bush 160mm x 75mm",
+    "size": "160mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 46.4,
+    "price_with_markup_aed": 47.33,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0098",
+    "source_sno": 98,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Bush",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Bush 160mm x 63mm",
+    "name_ar": "CPVC Reducer Bush 160mm x 63mm",
+    "size": "160mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 46.4,
+    "price_with_markup_aed": 47.33,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0099",
+    "source_sno": 99,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Long Reducer",
+    "type": "fitting",
+    "name_en": "CPVC Long Reducer 25mm x 20mm",
+    "name_ar": "CPVC Long Reducer 25mm x 20mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.8,
+    "price_with_markup_aed": 0.82,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0100",
+    "source_sno": 100,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Long Reducer",
+    "type": "fitting",
+    "name_en": "CPVC Long Reducer 32mm x 25mm",
+    "name_ar": "CPVC Long Reducer 32mm x 25mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.4,
+    "price_with_markup_aed": 1.43,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0101",
+    "source_sno": 101,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Long Reducer",
+    "type": "fitting",
+    "name_en": "CPVC Long Reducer 40mm x 32mm",
+    "name_ar": "CPVC Long Reducer 40mm x 32mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.8,
+    "price_with_markup_aed": 2.86,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0102",
+    "source_sno": 102,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Long Reducer",
+    "type": "fitting",
+    "name_en": "CPVC Long Reducer 50mm x40mm",
+    "name_ar": "CPVC Long Reducer 50mm x40mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.0,
+    "price_with_markup_aed": 5.1,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0103",
+    "source_sno": 103,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Long Reducer",
+    "type": "fitting",
+    "name_en": "CPVC Long Reducer 63mm x 50mm",
+    "name_ar": "CPVC Long Reducer 63mm x 50mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 10.0,
+    "price_with_markup_aed": 10.2,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0104",
+    "source_sno": 104,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Tee",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Tee 20mm x 20mm x 16mm",
+    "name_ar": "CPVC Reducer Tee 20mm x 20mm x 16mm",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.0,
+    "price_with_markup_aed": 1.02,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0105",
+    "source_sno": 105,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Tee",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Tee 25mm x 25mm x 20mm",
+    "name_ar": "CPVC Reducer Tee 25mm x 25mm x 20mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.6,
+    "price_with_markup_aed": 1.63,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0106",
+    "source_sno": 106,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Elbow",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Elbow 90° 25mm x 20mm",
+    "name_ar": "CPVC Reducer Elbow 90° 25mm x 20mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 1.4,
+    "price_with_markup_aed": 1.43,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0107",
+    "source_sno": 107,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Reducer Elbow",
+    "type": "fitting",
+    "name_en": "CPVC Reducer Elbow 90° 32mm x 25mm",
+    "name_ar": "CPVC Reducer Elbow 90° 32mm x 25mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 2.4,
+    "price_with_markup_aed": 2.45,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0108",
+    "source_sno": 108,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Step Over Bend",
+    "type": "fitting",
+    "name_en": "CPVC Step Over Bend 16mm PN25",
+    "name_ar": "CPVC Step Over Bend 16mm PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.0,
+    "price_with_markup_aed": 1.02,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0109",
+    "source_sno": 109,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Step Over Bend",
+    "type": "fitting",
+    "name_en": "CPVC Step Over Bend 20mm PN25",
+    "name_ar": "CPVC Step Over Bend 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.6,
+    "price_with_markup_aed": 2.65,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0110",
+    "source_sno": 110,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Step Over Bend",
+    "type": "fitting",
+    "name_en": "CPVC Step Over Bend 25mm PN25",
+    "name_ar": "CPVC Step Over Bend 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 4.0,
+    "price_with_markup_aed": 4.08,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0111",
+    "source_sno": 111,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Step Over Bend",
+    "type": "fitting",
+    "name_en": "CPVC Step Over Bend 25mm PN25(SHORT  )",
+    "name_ar": "CPVC Step Over Bend 25mm PN25(SHORT  )",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0112",
+    "source_sno": 112,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 16mm PN20",
+    "name_ar": "CPVC Union 16mm PN20",
+    "size": "16mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 1.45,
+    "price_with_markup_aed": 1.48,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0113",
+    "source_sno": 113,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 20mm PN20",
+    "name_ar": "CPVC Union 20mm PN20",
+    "size": "20mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 2.4,
+    "price_with_markup_aed": 2.45,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0114",
+    "source_sno": 114,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 25mm PN20",
+    "name_ar": "CPVC Union 25mm PN20",
+    "size": "25mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 4.0,
+    "price_with_markup_aed": 4.08,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0115",
+    "source_sno": 115,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 32mm PN20",
+    "name_ar": "CPVC Union 32mm PN20",
+    "size": "32mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 6.0,
+    "price_with_markup_aed": 6.12,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0116",
+    "source_sno": 116,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 40mm PN20",
+    "name_ar": "CPVC Union 40mm PN20",
+    "size": "40mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 7.7,
+    "price_with_markup_aed": 7.85,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0117",
+    "source_sno": 117,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 50mm PN20",
+    "name_ar": "CPVC Union 50mm PN20",
+    "size": "50mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 13.5,
+    "price_with_markup_aed": 13.77,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0118",
+    "source_sno": 118,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Union",
+    "type": "fitting",
+    "name_en": "CPVC Union 63mm PN20",
+    "name_ar": "CPVC Union 63mm PN20",
+    "size": "63mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 23.0,
+    "price_with_markup_aed": 23.46,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0119",
+    "source_sno": 119,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 16mm PN25",
+    "name_ar": "CPVC End Cap 16mm PN25",
+    "size": "16mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.24,
+    "price_with_markup_aed": 0.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0120",
+    "source_sno": 120,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 20mm PN25",
+    "name_ar": "CPVC End Cap 20mm PN25",
+    "size": "20mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.4,
+    "price_with_markup_aed": 0.41,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0121",
+    "source_sno": 121,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 25mm PN25",
+    "name_ar": "CPVC End Cap 25mm PN25",
+    "size": "25mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 0.7,
+    "price_with_markup_aed": 0.71,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0122",
+    "source_sno": 122,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 32mm PN25",
+    "name_ar": "CPVC End Cap 32mm PN25",
+    "size": "32mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 1.4,
+    "price_with_markup_aed": 1.43,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0123",
+    "source_sno": 123,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 40mm PN25",
+    "name_ar": "CPVC End Cap 40mm PN25",
+    "size": "40mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 2.2,
+    "price_with_markup_aed": 2.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0124",
+    "source_sno": 124,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 50mm PN25",
+    "name_ar": "CPVC End Cap 50mm PN25",
+    "size": "50mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 4.4,
+    "price_with_markup_aed": 4.49,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0125",
+    "source_sno": 125,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 63mm PN25",
+    "name_ar": "CPVC End Cap 63mm PN25",
+    "size": "63mm",
+    "pressure_rating": "PN25",
+    "unit": "Pcs",
+    "price_aed": 8.2,
+    "price_with_markup_aed": 8.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0126",
+    "source_sno": 126,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 75mm PN20",
+    "name_ar": "CPVC End Cap 75mm PN20",
+    "size": "75mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 11.4,
+    "price_with_markup_aed": 11.63,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0127",
+    "source_sno": 127,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 90mm PN20",
+    "name_ar": "CPVC End Cap 90mm PN20",
+    "size": "90mm",
+    "pressure_rating": "PN20",
+    "unit": "Pcs",
+    "price_aed": 19.0,
+    "price_with_markup_aed": 19.38,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0128",
+    "source_sno": 128,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 110mm PN16",
+    "name_ar": "CPVC End Cap 110mm PN16",
+    "size": "110mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 25.7,
+    "price_with_markup_aed": 26.21,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0129",
+    "source_sno": 129,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "End Cap",
+    "type": "fitting",
+    "name_en": "CPVC End Cap 160mm PN16",
+    "name_ar": "CPVC End Cap 160mm PN16",
+    "size": "160mm",
+    "pressure_rating": "PN16",
+    "unit": "Pcs",
+    "price_aed": 79.0,
+    "price_with_markup_aed": 80.58,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0130",
+    "source_sno": 130,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Mono Clip",
+    "type": "fitting",
+    "name_en": "CPVC Mono Clip 16mm",
+    "name_ar": "CPVC Mono Clip 16mm",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.24,
+    "price_with_markup_aed": 0.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0131",
+    "source_sno": 131,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Mono Clip",
+    "type": "fitting",
+    "name_en": "CPVC Mono Clip 20mm",
+    "name_ar": "CPVC Mono Clip 20mm",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.28,
+    "price_with_markup_aed": 0.29,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0132",
+    "source_sno": 132,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Mono Clip",
+    "type": "fitting",
+    "name_en": "CPVC Mono Clip 25mm",
+    "name_ar": "CPVC Mono Clip 25mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.45,
+    "price_with_markup_aed": 0.46,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0133",
+    "source_sno": 133,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 25mm",
+    "name_ar": "CPVC Flange 25mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.4,
+    "price_with_markup_aed": 6.53,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0134",
+    "source_sno": 134,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 32mm",
+    "name_ar": "CPVC Flange 32mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 8.2,
+    "price_with_markup_aed": 8.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0135",
+    "source_sno": 135,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 40mm",
+    "name_ar": "CPVC Flange 40mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 12.8,
+    "price_with_markup_aed": 13.06,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0136",
+    "source_sno": 136,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 50mm",
+    "name_ar": "CPVC Flange 50mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 14.7,
+    "price_with_markup_aed": 14.99,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0137",
+    "source_sno": 137,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 63mm",
+    "name_ar": "CPVC Flange 63mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 20.5,
+    "price_with_markup_aed": 20.91,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0138",
+    "source_sno": 138,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 75mm",
+    "name_ar": "CPVC Flange 75mm",
+    "size": "75mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 30.0,
+    "price_with_markup_aed": 30.6,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0139",
+    "source_sno": 139,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 90mm",
+    "name_ar": "CPVC Flange 90mm",
+    "size": "90mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 37.8,
+    "price_with_markup_aed": 38.56,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0140",
+    "source_sno": 140,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange 110mm",
+    "name_ar": "CPVC Flange 110mm",
+    "size": "110mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 53.0,
+    "price_with_markup_aed": 54.06,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0141",
+    "source_sno": 141,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Flange",
+    "type": "fitting",
+    "name_en": "CPVC Flange Vanstone 160mm",
+    "name_ar": "CPVC Flange Vanstone 160mm",
+    "size": "160mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 100.0,
+    "price_with_markup_aed": 102.0,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0142",
+    "source_sno": 142,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 16mm x 1/2\"",
+    "name_ar": "Brass MTA 16mm x 1/2\"",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.97,
+    "price_with_markup_aed": 7.11,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0143",
+    "source_sno": 143,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 20mm x 1/2\"",
+    "name_ar": "Brass MTA 20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.0,
+    "price_with_markup_aed": 7.14,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0144",
+    "source_sno": 144,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 25mm x 1/2\"",
+    "name_ar": "Brass MTA 25mm x 1/2\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 8.0,
+    "price_with_markup_aed": 8.16,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0145",
+    "source_sno": 145,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 25mm x 3/4\"",
+    "name_ar": "Brass MTA 25mm x 3/4\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 9.0,
+    "price_with_markup_aed": 9.18,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0146",
+    "source_sno": 146,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 32mm x 1\"",
+    "name_ar": "Brass MTA 32mm x 1\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 13.0,
+    "price_with_markup_aed": 13.26,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0147",
+    "source_sno": 147,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 40mm x 11/4\"",
+    "name_ar": "Brass MTA 40mm x 11/4\"",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 25.0,
+    "price_with_markup_aed": 25.5,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0148",
+    "source_sno": 148,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 50mm x 11/2\"",
+    "name_ar": "Brass MTA 50mm x 11/2\"",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 30.0,
+    "price_with_markup_aed": 30.6,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0149",
+    "source_sno": 149,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass MTA",
+    "type": "fitting",
+    "name_en": "Brass MTA 63mm x 2\"",
+    "name_ar": "Brass MTA 63mm x 2\"",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 46.0,
+    "price_with_markup_aed": 46.92,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0150",
+    "source_sno": 150,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 16mm x 1/2\"",
+    "name_ar": "Brass FTA 16mm x 1/2\"",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.07,
+    "price_with_markup_aed": 5.17,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0151",
+    "source_sno": 151,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 20mm x 1/2\"",
+    "name_ar": "Brass FTA 20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.2,
+    "price_with_markup_aed": 5.3,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0152",
+    "source_sno": 152,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 25mm x 1/2\"",
+    "name_ar": "Brass FTA 25mm x 1/2\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.4,
+    "price_with_markup_aed": 5.51,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0153",
+    "source_sno": 153,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 25mm x 3/4\"",
+    "name_ar": "Brass FTA 25mm x 3/4\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.25,
+    "price_with_markup_aed": 7.4,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0154",
+    "source_sno": 154,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 32mm x 3/4\"",
+    "name_ar": "Brass FTA 32mm x 3/4\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.7,
+    "price_with_markup_aed": 7.85,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0155",
+    "source_sno": 155,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 32mm x 1\"",
+    "name_ar": "Brass FTA 32mm x 1\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 11.8,
+    "price_with_markup_aed": 12.04,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0156",
+    "source_sno": 156,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 40mm x 11/4\"",
+    "name_ar": "Brass FTA 40mm x 11/4\"",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 21.8,
+    "price_with_markup_aed": 22.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0157",
+    "source_sno": 157,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FTA",
+    "type": "fitting",
+    "name_en": "Brass FTA 50mm x 11/2\"",
+    "name_ar": "Brass FTA 50mm x 11/2\"",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 27.0,
+    "price_with_markup_aed": 27.54,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0158",
+    "source_sno": 158,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass 20mm x 1/2\"",
+    "name_ar": "Male Union Brass 20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 8.2,
+    "price_with_markup_aed": 8.36,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0159",
+    "source_sno": 159,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass 25mm x 3/4\"",
+    "name_ar": "Male Union Brass 25mm x 3/4\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 16.3,
+    "price_with_markup_aed": 16.63,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0160",
+    "source_sno": 160,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass 32mm x 1\"",
+    "name_ar": "Male Union Brass 32mm x 1\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 21.8,
+    "price_with_markup_aed": 22.24,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0161",
+    "source_sno": 161,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass  40mm x 1   1/4\"",
+    "name_ar": "Male Union Brass  40mm x 1   1/4\"",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 32.6,
+    "price_with_markup_aed": 33.25,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0162",
+    "source_sno": 162,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass  50mm x 1   1/2\"",
+    "name_ar": "Male Union Brass  50mm x 1   1/2\"",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 43.5,
+    "price_with_markup_aed": 44.37,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0163",
+    "source_sno": 163,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Union",
+    "type": "fitting",
+    "name_en": "Male Union Brass  63mm x 2\"",
+    "name_ar": "Male Union Brass  63mm x 2\"",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 83.25,
+    "price_with_markup_aed": 84.92,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0164",
+    "source_sno": 164,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Elbow",
+    "type": "fitting",
+    "name_en": "Brass FT Elbow 16mm x 1/2\"",
+    "name_ar": "Brass FT Elbow 16mm x 1/2\"",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.43,
+    "price_with_markup_aed": 5.54,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0165",
+    "source_sno": 165,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Elbow",
+    "type": "fitting",
+    "name_en": "Brass FT Elbow 20mm x 1/2\"",
+    "name_ar": "Brass FT Elbow 20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.5,
+    "price_with_markup_aed": 5.61,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0166",
+    "source_sno": 166,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Elbow",
+    "type": "fitting",
+    "name_en": "Brass FT Elbow 25mm x 1/2\"",
+    "name_ar": "Brass FT Elbow 25mm x 1/2\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.0,
+    "price_with_markup_aed": 6.12,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0167",
+    "source_sno": 167,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Elbow",
+    "type": "fitting",
+    "name_en": "Brass FT Elbow 25mm x 3/4\"",
+    "name_ar": "Brass FT Elbow 25mm x 3/4\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.8,
+    "price_with_markup_aed": 7.96,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0168",
+    "source_sno": 168,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Elbow",
+    "type": "fitting",
+    "name_en": "Brass FT Elbow 32mm x 3/4\"",
+    "name_ar": "Brass FT Elbow 32mm x 3/4\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 9.0,
+    "price_with_markup_aed": 9.18,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0169",
+    "source_sno": 169,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Wall Mounting",
+    "type": "fitting",
+    "name_en": "Wall Mounting Brass FT Elbow 16mm x 1/2\"",
+    "name_ar": "Wall Mounting Brass FT Elbow 16mm x 1/2\"",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 5.88,
+    "price_with_markup_aed": 6.0,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0170",
+    "source_sno": 170,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Wall Mounting",
+    "type": "fitting",
+    "name_en": "Wall Mounting Brass FT Elbow 20mm x 1/2\"",
+    "name_ar": "Wall Mounting Brass FT Elbow 20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.0,
+    "price_with_markup_aed": 6.12,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0171",
+    "source_sno": 171,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Wall Mounting",
+    "type": "fitting",
+    "name_en": "Wall Mounting Brass FT Elbow 25mm x 1/2\"",
+    "name_ar": "Wall Mounting Brass FT Elbow 25mm x 1/2\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.0,
+    "price_with_markup_aed": 7.14,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0172",
+    "source_sno": 172,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Wall Mounting",
+    "type": "fitting",
+    "name_en": "Wall Mounting Brass FT Elbow 25mm x 3/4”",
+    "name_ar": "Wall Mounting Brass FT Elbow 25mm x 3/4”",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 8.7,
+    "price_with_markup_aed": 8.87,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0173",
+    "source_sno": 173,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Wall Mounting",
+    "type": "fitting",
+    "name_en": "Wall Mounting Brass FT Elbow 32mm x 3/4\"",
+    "name_ar": "Wall Mounting Brass FT Elbow 32mm x 3/4\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 9.8,
+    "price_with_markup_aed": 10.0,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0174",
+    "source_sno": 174,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee 16mm x 1/2\"",
+    "name_ar": "Brass FT Tee 16mm x 1/2\"",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.33,
+    "price_with_markup_aed": 6.46,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0175",
+    "source_sno": 175,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  20mm x 1/2\"",
+    "name_ar": "Brass FT Tee  20mm x 1/2\"",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 6.4,
+    "price_with_markup_aed": 6.53,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0176",
+    "source_sno": 176,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  25mm x 1/2\"",
+    "name_ar": "Brass FT Tee  25mm x 1/2\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 7.25,
+    "price_with_markup_aed": 7.4,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0177",
+    "source_sno": 177,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  25mm x 3/4\"",
+    "name_ar": "Brass FT Tee  25mm x 3/4\"",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 9.5,
+    "price_with_markup_aed": 9.69,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0178",
+    "source_sno": 178,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  32mm x 3/4\"",
+    "name_ar": "Brass FT Tee  32mm x 3/4\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 10.4,
+    "price_with_markup_aed": 10.61,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0179",
+    "source_sno": 179,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  32mm x 1\"",
+    "name_ar": "Brass FT Tee  32mm x 1\"",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 14.7,
+    "price_with_markup_aed": 14.99,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0180",
+    "source_sno": 180,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  40mm x 3/4\"",
+    "name_ar": "Brass FT Tee  40mm x 3/4\"",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 12.2,
+    "price_with_markup_aed": 12.44,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0181",
+    "source_sno": 181,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Brass FT Tee",
+    "type": "fitting",
+    "name_en": "Brass FT Tee  50mm x 3/4\"",
+    "name_ar": "Brass FT Tee  50mm x 3/4\"",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 16.0,
+    "price_with_markup_aed": 16.32,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0182",
+    "source_sno": 182,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Stop Valve",
+    "type": "valve",
+    "name_en": "CPVC Stop Valve 16mm",
+    "name_ar": "CPVC Stop Valve 16mm",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 26.24,
+    "price_with_markup_aed": 26.76,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0183",
+    "source_sno": 183,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Stop Valve",
+    "type": "valve",
+    "name_en": "CPVC Stop Valve 20mm",
+    "name_ar": "CPVC Stop Valve 20mm",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 27.0,
+    "price_with_markup_aed": 27.54,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0184",
+    "source_sno": 184,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Stop Valve",
+    "type": "valve",
+    "name_en": "CPVC Stop Valve 25mm",
+    "name_ar": "CPVC Stop Valve 25mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 27.0,
+    "price_with_markup_aed": 27.54,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0185",
+    "source_sno": 185,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Concealed Valve",
+    "type": "valve",
+    "name_en": "Concealed Valve 16mm",
+    "name_ar": "Concealed Valve 16mm",
+    "size": "16mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 39.14,
+    "price_with_markup_aed": 39.92,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0186",
+    "source_sno": 186,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Concealed Valve",
+    "type": "valve",
+    "name_en": "Concealed Valve 20mm",
+    "name_ar": "Concealed Valve 20mm",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 40.5,
+    "price_with_markup_aed": 41.31,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0187",
+    "source_sno": 187,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Concealed Valve",
+    "type": "valve",
+    "name_en": "Concealed Valve 25mm",
+    "name_ar": "Concealed Valve 25mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 40.5,
+    "price_with_markup_aed": 41.31,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0188",
+    "source_sno": 188,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 20mm",
+    "name_ar": "Double Union Ball Valve 20mm",
+    "size": "20mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 14.5,
+    "price_with_markup_aed": 14.79,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0189",
+    "source_sno": 189,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 25mm",
+    "name_ar": "Double Union Ball Valve 25mm",
+    "size": "25mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 22.7,
+    "price_with_markup_aed": 23.15,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0190",
+    "source_sno": 190,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 32mm",
+    "name_ar": "Double Union Ball Valve 32mm",
+    "size": "32mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 33.8,
+    "price_with_markup_aed": 34.48,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0191",
+    "source_sno": 191,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 40mm",
+    "name_ar": "Double Union Ball Valve 40mm",
+    "size": "40mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 44.4,
+    "price_with_markup_aed": 45.29,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0192",
+    "source_sno": 192,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 50mm",
+    "name_ar": "Double Union Ball Valve 50mm",
+    "size": "50mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 68.5,
+    "price_with_markup_aed": 69.87,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0193",
+    "source_sno": 193,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Double Union",
+    "type": "valve",
+    "name_en": "Double Union Ball Valve 63mm",
+    "name_ar": "Double Union Ball Valve 63mm",
+    "size": "63mm",
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 125.5,
+    "price_with_markup_aed": 128.01,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0194",
+    "source_sno": 194,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Male Threaded",
+    "type": "fitting",
+    "name_en": "Male Threaded Plug 1/2\" BSP",
+    "name_ar": "Male Threaded Plug 1/2\" BSP",
+    "size": null,
+    "pressure_rating": null,
+    "unit": "Pcs",
+    "price_aed": 0.5,
+    "price_with_markup_aed": 0.51,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  },
+  {
+    "sku": "FG-0195",
+    "source_sno": 195,
+    "section": "Hot Water",
+    "section_slug": "hot-water",
+    "fitting_type": "Solvent Cement",
+    "type": "adhesive",
+    "name_en": "E-Z WELD@ Solvent Cement 237mI",
+    "name_ar": "E-Z WELD@ Solvent Cement 237mI",
+    "size": null,
+    "pressure_rating": null,
+    "unit": "Can",
+    "price_aed": 20.78,
+    "price_with_markup_aed": 21.2,
+    "certifications": [
+      "FM",
+      "NSF",
+      "UL"
+    ]
+  }
+]
