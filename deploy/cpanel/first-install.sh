@@ -22,10 +22,10 @@ fi
 cd "$ROOT"
 
 if [[ ! -f "$ERP/.env" ]]; then
-  if [[ -f "$ROOT/deploy/cpanel/env.template" ]]; then
-    cp "$ROOT/deploy/cpanel/env.template" "$ERP/.env"
-  else
+  if [[ -f "$ROOT/deploy/cpanel/env.mysql.template" ]]; then
     cp "$ROOT/deploy/cpanel/env.mysql.template" "$ERP/.env"
+  else
+    cp "$ROOT/deploy/cpanel/env.template" "$ERP/.env"
   fi
   echo ""
   echo "!! عدّل الملف قبل المتابعة: $ERP/.env"
