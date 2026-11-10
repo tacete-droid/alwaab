@@ -28,7 +28,7 @@ class QuotationSentMail extends Mailable
                 config('mail.from.address'),
                 config('mail.from.name'),
             ),
-            subject: 'Quotation '.$this->quotation->number.' — Al Waab Building Materials',
+            subject: 'Quotation '.$this->quotation->number.' — AL WAAB PIPES & FITTINGS TRADING',
         );
     }
 

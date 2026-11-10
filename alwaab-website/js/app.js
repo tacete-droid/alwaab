@@ -38,8 +38,6 @@
     "FlowGuard®": "FlowGuard®",
     "Plumbing Systems": "أنظمة السباكة",
     "Sun–Thu · 8:00 – 18:00": "الأحد – الخميس · 8:00 صباحاً – 6:00 مساءً",
-    "Building Materials": "مواد البناء",
-    "Building Materials · UAE": "مواد البناء",
     "Home": "الرئيسية",
     "About Us": "من نحن",
     "Products": "منتجاتنا",
@@ -55,8 +53,8 @@
     "Official FlowGuard® CPVC Supplier — United Arab Emirates": "المورّد الرسمي لأنظمة FlowGuard® CPVC — الإمارات العربية المتحدة",
     "Certified Water Piping.": "أنابيب مياه معتمدة.",
     "Delivered with Confidence.": "نُسلّمها بثقة.",
-    "We don't just supply pipes — we deliver safety, trust and certified performance. Al Waab Building Materials brings FlowGuard® CPVC hot & cold water systems to projects across the UAE.":
-      "نحن لا نكتفي بتوريد الأنابيب، بل نقدم منظومة متكاملة من الأمان والجودة المعتمدة. توفر مؤسسة الوعب لمواد البناء أنظمة FlowGuard® CPVC للمياه الساخنة والباردة لمختلف المشاريع الإنشائية في دولة الإمارات.",
+    "We don't just supply pipes — we deliver safety, trust and certified performance. AL WAAB PIPES & FITTINGS TRADING brings FlowGuard® CPVC hot & cold water systems to projects across the UAE.":
+      "نحن لا نكتفي بتوريد الأنابيب، بل نقدم منظومة متكاملة من الأمان والجودة المعتمدة. يوفر الوعب لتجارة الأنابيب والتجهيزات أنظمة FlowGuard® CPVC للمياه الساخنة والباردة لمختلف المشاريع الإنشائية في دولة الإمارات.",
     "Explore Products": "تصفّح المنتجات",
     "Manufacturer Warranty": "ضمان المصنّع",
     "Certified Systems": "أنظمة معتمدة",
@@ -68,8 +66,8 @@
     // About preview
     "Who We Are": "من نحن",
     "A Certified Partner — Not Just a Vendor": "شريككم التقني المعتمد — لسنا مجرد مورّدين",
-    "Al Waab Building Materials Trading EST is the UAE arm of the Al Waab group, specialising in certified water piping systems. We supply genuine FlowGuard® CPVC pipes and fittings backed by full documentation, technical support and BOQ alignment.":
-      "مؤسسة الوعب لتجارة مواد البناء هي الذراع الإماراتية لمجموعة الوعب، متخصصة في أنظمة أنابيب المياه المعتمدة. نورّد أنابيب وتوصيلات FlowGuard® CPVC الأصلية مدعومة بالوثائق الكاملة والدعم الفني ومطابقة جداول الكميات (BOQ).",
+    "AL WAAB PIPES & FITTINGS TRADING is the UAE arm of the Al Waab group, specialising in certified water piping systems. We supply genuine FlowGuard® CPVC pipes and fittings backed by full documentation, technical support and BOQ alignment.":
+      "الوعب لتجارة الأنابيب والتجهيزات هو الذراع الإماراتية لمجموعة الوعب، متخصصة في أنظمة أنابيب المياه المعتمدة. نورّد أنابيب وتوصيلات FlowGuard® CPVC الأصلية مدعومة بالوثائق الكاملة والدعم الفني ومطابقة جداول الكميات (BOQ).",
     "Our mission is simple: help consultants and contractors close compliance gaps and avoid project delays with piping that is safe, traceable and approval-ready.":
       "مهمتنا الأساسية: دعم الاستشاريين والمقاولين في تحقيق أعلى معايير المطابقة وتجنّب تأخير المشاريع من خلال توفير أنظمة أنابيب آمنة، قابلة للتتبّع، وجاهزة للاعتماد الفوري.",
     "WRAS & NSF certified": "معتمد WRAS و NSF",
@@ -154,14 +152,14 @@
     "Call +971 54 769 6440": "اتصل \u202A+971 54 769 6440\u202C",
 
     // Footer
-    "Al Waab Building Materials Trading EST — UAE supplier of certified FlowGuard® CPVC water piping systems. Delivered with confidence.":
-      "مؤسسة الوعب لتجارة مواد البناء — مورّد إماراتي لأنظمة أنابيب مياه FlowGuard® CPVC المعتمدة. نُسلّمها بثقة.",
+    "AL WAAB PIPES & FITTINGS TRADING — UAE supplier of certified FlowGuard® CPVC water piping systems. Delivered with confidence.":
+      "الوعب لتجارة الأنابيب والتجهيزات — مورّد إماراتي لأنظمة أنابيب مياه FlowGuard® CPVC المعتمدة. نُسلّمها بثقة.",
     "Quick Links": "روابط سريعة",
     "Project Kits": "حزم المشاريع",
     "Get in Touch": "تواصل معنا",
     "206 Aboo Baker, Al Siddique Road, Mohamed Hasan Building, Deira, Dubai, UAE":
       "206 شارع أبو بكر الصديق، مبنى محمد حسن، ديرة، دبي، الإمارات",
-    "Al Waab Building Materials Trading EST. All rights reserved.": "مؤسسة الوعب لتجارة مواد البناء. جميع الحقوق محفوظة.",
+    "AL WAAB PIPES & FITTINGS TRADING. All rights reserved.": "الوعب لتجارة الأنابيب والتجهيزات. جميع الحقوق محفوظة.",
     "FlowGuard® is a registered trademark of The Lubrizol Corporation. ·": "FlowGuard® علامة تجارية مسجّلة لشركة لوبريزول. ·",
     "Privacy": "الخصوصية", "Terms": "الشروط",
 
@@ -188,8 +186,8 @@
     // About page
     "Our Story": "قصتنا",
     "A Compliance-First Building Materials Partner": "شريك مواد بناء يضع المطابقة أولاً",
-    "Al Waab Building Materials Trading EST is the United Arab Emirates branch of the Al Waab group — an organisation with a proven track record in certified plastic piping systems. We don't just supply pipes; we deliver safety, trust and certified performance.":
-      "مؤسسة الوعب لتجارة مواد البناء هي فرع الإمارات العربية المتحدة لمجموعة الوعب — مؤسسة ذات سجل حافل في أنظمة الأنابيب البلاستيكية المعتمدة. نحن لا نورّد الأنابيب فحسب؛ بل نقدّم الأمان والثقة والأداء المعتمد.",
+    "AL WAAB PIPES & FITTINGS TRADING is the United Arab Emirates branch of the Al Waab group — an organisation with a proven track record in certified plastic piping systems. We don't just supply pipes; we deliver safety, trust and certified performance.":
+      "الوعب لتجارة الأنابيب والتجهيزات هو فرع الإمارات العربية المتحدة لمجموعة الوعب — مؤسسة ذات سجل حافل في أنظمة الأنابيب البلاستيكية المعتمدة. نحن لا نورّد الأنابيب فحسب؛ بل نقدّم الأمان والثقة والأداء المعتمد.",
     "As an authorised supplier of FlowGuard® CPVC by The Lubrizol Corporation (USA), we provide consultants and contractors with genuine, traceable products, complete submittals and the technical backing needed to keep projects on schedule and fully compliant.":
       "بصفتنا مورّداً معتمداً لـ FlowGuard® CPVC من شركة لوبريزول (الولايات المتحدة)، نزوّد الاستشاريين والمقاولين بمنتجات أصلية قابلة للتتبّع، ومستندات كاملة، والدعم الفني اللازم لإبقاء المشاريع في موعدها ومطابقة تماماً.",
     "From villas and towers to hospitals and industrial plants, our certified piping systems are engineered to perform for 50 years and beyond.":
@@ -508,7 +506,7 @@
     "Apply to Partner": "تقدّم لتكون شريكاً",
 
     // Contact page
-    "Al Waab Building Materials Trading EST": "مؤسسة الوعب لتجارة مواد البناء",
+    "AL WAAB PIPES & FITTINGS TRADING": "الوعب لتجارة الأنابيب والتجهيزات",
     "Address": "العنوان", "Phone": "الهاتف", "Email": "البريد الإلكتروني",
     "Working Hours": "ساعات العمل",
     "Sunday – Thursday: 8:00 AM – 6:00 PM": "الأحد – الخميس: 8:00 ص – 6:00 م",
@@ -873,7 +871,7 @@
     if (!bot.body.children.length) {
       pushBot(curLang === "ar"
         ? "مرحباً بكم في منصة FlowGuard® CPVC الفنية! 👋\nيسعدني الرد على استفساراتكم الهندسية حول المواصفات، المقاسات، الاعتمادات، والمقارنات الفنية للمشاريع."
-        : "Welcome to Al Waab Building Materials! 👋\nI'm the FlowGuard® CPVC smart assistant. Ask me anything about the products — temperature, pressure, sizes, comparisons, certificates and more.");
+        : "Welcome to AL WAAB PIPES & FITTINGS TRADING! 👋\nI'm the FlowGuard® CPVC smart assistant. Ask me anything about the products — temperature, pressure, sizes, comparisons, certificates and more.");
       renderChips();
     }
     setTimeout(function () { bot.input.focus(); }, 200);

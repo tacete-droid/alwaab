@@ -172,7 +172,7 @@
     $grandTotal    = round($afterDiscount + $vat, 2);
     $amountWords   = NumberToWords::aed($grandTotal);
 
-    $companyName = $settings['company_name_en'] ?? 'AL WAAB BUILDING MATERIALS TRADING EST';
+    $companyName = $settings['company_name_en'] ?? 'AL WAAB PIPES & FITTINGS TRADING';
     $validityDays = $settings['quotation_validity_days'] ?? '10';
 @endphp
 
