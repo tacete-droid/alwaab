@@ -7,7 +7,7 @@ window.CERTIFICATES_CATALOG = [
     title: "Third Party Certification & Lab Test Report",
     desc: "Complete domestic water pre-qualification dossier covering WRAS, NSF, HPD, EPD, ISO and Dubai Municipality compliance references.",
     meta: [
-      ["Issuer", "Al Waab Building Materials"],
+      ["Issuer", "AL WAAB PIPES & FITTINGS TRADING"],
       ["Scope", "Domestic Potable Water Systems"],
       ["Product", "FlowGuard\u00ae CPVC"]
     ]

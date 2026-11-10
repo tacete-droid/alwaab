@@ -207,7 +207,7 @@ MAIL_USERNAME=info@alwaab.ae
 MAIL_PASSWORD=
 MAIL_ENCRYPTION=ssl
 MAIL_FROM_ADDRESS=info@alwaab.ae
-MAIL_FROM_NAME="Al Waab Building Materials"
+MAIL_FROM_NAME="AL WAAB PIPES & FITTINGS TRADING"
 
 WEBSITE_API_KEY=ضع_مفتاح_قوي_هنا
 CORS_ALLOWED_ORIGINS=https://alwaabcpvc.ae,https://www.alwaabcpvc.ae

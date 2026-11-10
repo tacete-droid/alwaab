@@ -3,7 +3,7 @@
 
 Dear {{ $contactName }},
 
-Thank you for your enquiry with **Al Waab Building Materials Trading EST**.
+Thank you for your enquiry with **AL WAAB PIPES & FITTINGS TRADING**.
 
 Please find attached our quotation **{{ $quotation->number }}** for your review.
 

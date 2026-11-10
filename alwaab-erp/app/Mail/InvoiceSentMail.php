@@ -28,7 +28,7 @@ class InvoiceSentMail extends Mailable
                 config('mail.from.address'),
                 config('mail.from.name'),
             ),
-            subject: $this->invoice->type->labelEn().' '.$this->invoice->number.' — Al Waab Building Materials',
+            subject: $this->invoice->type->labelEn().' '.$this->invoice->number.' — AL WAAB PIPES & FITTINGS TRADING',
         );
     }
 

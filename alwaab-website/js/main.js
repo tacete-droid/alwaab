@@ -1,4 +1,4 @@
-/* Al Waab Building Materials — UAE | interactions */
+/* AL WAAB PIPES & FITTINGS TRADING — UAE | interactions */
 (function () {
   "use strict";
 

@@ -191,7 +191,7 @@
                 @endif
             </td>
             <td class="hdr-company">
-                <div class="hdr-name">{{ $settings['company_name_en'] ?? 'AL WAAB BUILDING MATERIALS TRADING EST' }}</div>
+                <div class="hdr-name">{{ $settings['company_name_en'] ?? 'AL WAAB PIPES & FITTINGS TRADING' }}</div>
                 <div class="hdr-tag">{{ $settings['company_tagline'] ?? 'FlowGuard CPVC Pipes & Fittings — DIN EN ISO15877' }}</div>
                 <div class="hdr-cert">FM Approved &nbsp;·&nbsp; NSF Certified &nbsp;·&nbsp; UL Listed</div>
             </td>
@@ -382,7 +382,7 @@
 
     {{-- ══ FOOTER ══ --}}
     <div class="footer">
-        <strong>{{ $settings['company_name_en'] ?? 'AL WAAB BUILDING MATERIALS TRADING EST' }}</strong><br>
+        <strong>{{ $settings['company_name_en'] ?? 'AL WAAB PIPES & FITTINGS TRADING' }}</strong><br>
         {{ $settings['invoice_footer_note'] ?? 'Thank you for your business!' }}<br>
         Tel: {{ $settings['company_phone'] ?? '' }} &nbsp;|&nbsp;
         Landline: {{ $settings['company_landline'] ?? '' }} &nbsp;|&nbsp;
